@@ -1,4 +1,4 @@
-# [Knowledge Base](../kb/)
+# [Knowledge Base](../)
 
 ## Mastering HTML
 

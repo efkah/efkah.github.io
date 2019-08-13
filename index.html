@@ -3,6 +3,10 @@
 
 <head>
     <title>efkah.github.io</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <meta name='apple-mobile-web-app-status-bar-style' content='black-translucent'/>
+
     <link rel="stylesheet" type="text/css" href="css/full-page-scroll.css">
     <!-- <link rel="stylesheet" type="text/css" href="css/full-side-scroll.css"> -->
     <style>
@@ -67,10 +71,11 @@
         main>section {
             border-top: 1px solid #363020BB;
             position: relative;
+            padding-left: 5vw;
         }
         main>#section0 {
             display: grid;
-            grid-template-columns: 80vw 80vw 80vw;
+            grid-template-columns: 90vw 90vw 90vw;
             background-color: #0FC3C6
 
         }
@@ -88,19 +93,58 @@
         }
 
         article {
-            overflow-y: hidden;
-            transition: unset;
+            overflow: hidden;
+            height: 88vh;
         }
 
         article .back-button {
             z-index: 1001;
-            width: 6vh;
-            height: 6vh;
-            background-color: red;
             position: absolute;
+            right: 45vw;
             bottom: 0;
-            right: 0;
-            visibility: hidden;
+            cursor: pointer;
+            margin-right: .5vh;
+            font-family: monospace;
+            font-size: 6vh;
+            font-weight: bold;
+            text-shadow: 0 0 .5vh #FFFFFF;
+        }
+        article .next-button {
+            z-index: 1001;
+            position: absolute;
+            left: 45vw;
+            bottom: 0;
+            margin-left: .5vh;
+            cursor: pointer;
+            font-family: monospace;
+            font-size: 6vh;
+            font-weight: bold;
+	        text-shadow: 0 0 .5vh #FFFFFF;
+        }
+        .polaroid {
+            padding: 1em;
+            max-width: fit-content;
+            max-height: fit-content;
+            background-color: white;
+            transform: rotate(-2deg) scale(1.2);
+            transform-origin: 0 0;
+            box-shadow: 0.1em 0.1em 0.4em black;
+            margin-top: 2vh;
+        }
+        .polaroid>img {
+            object-fit: cover;
+            max-height: 60vh;
+            max-width: 60vw;
+            object-position: top center;
+        }
+        .polaroid>div {
+            margin-top: .2em;
+            font-size: 2em;
+            width: inherit;
+            text-align: center;
+            font-family: monospace;
+            transform: rotate(-2deg);
+            font-weight: bold;
         }
     </style>
 </head>
@@ -112,122 +156,56 @@
     </header>
     <main id="main" class="scroll-container ">
         <section id="section0" class="item-container">
-            <article>
-                <h1>This is Felix Kah</h1>
-                <ol>
-                    <li>About Me</li>
-                    <li>Projects</li>
+                <article>
+                    <h1>...this is Felix Kah</h1>
+                    What you will soon find on this page:
                     <ol>
-                        <li>
-                            ShapeStacker
-                        </li>
-                        <li>
-                            ShapeStacker IOS
-                        </li>
-                        <li>
-                            Universal Sticker Tool IOS
-                        </li>
-                    </ol>
-                    <li>Knowledge Base</li>
-                </ol>
-            </article>
-            <article >
-                <h1>This is Felix Kah</h1>
-                <ol>
-                    <li>About Me</li>
-                    <li>Projects</li>
-                    <ol>
-                        <li>
-                            ShapeStacker
-                        </li>
-                        <li>
-                            ShapeStacker IOS
-                        </li>
-                        <li>
-                            Universal Sticker Tool IOS
-                        </li>
-                    </ol>
-                    <li>Knowledge Base</li>
-                </ol>
-                    <h1>This is Felix Kah</h1>
-                    <ol>
-                        <li>About Me</li>
+                        <li>About Me (where you are)</li>
                         <li>Projects</li>
-                        <ol>
-                            <li>
-                                ShapeStacker
-                            </li>
-                            <li>
-                                ShapeStacker IOS
-                            </li>
-                            <li>
-                                Universal Sticker Tool IOS
-                            </li>
-                        </ol>
                         <li>Knowledge Base</li>
-                            <li>Knowledge Base</li>
-                </ol>
-                <h1>This is Felix Kah</h1>
-                <ol>
-                    <li>About Me</li>
-                    <li>Projects</li>
-                    <ol>
-                        <li>
-                            ShapeStacker
-                        </li>
-                        <li>
-                            ShapeStacker IOS
-                        </li>
-                        <li>
-                            Universal Sticker Tool IOS
-                        </li>
                     </ol>
-                    <li>Knowledge Base</li>
-        </ol>
-        <h1>This is Felix Kah</h1>
-        <ol>
-            <li>About Me</li>
-            <li>Projects</li>
-            <ol>
-                <li>
-                    ShapeStacker
-                </li>
-                <li>
-                    ShapeStacker IOS
-                </li>
-                <li>
-                    Universal Sticker Tool IOS
-                </li>
-            </ol>
-            <li>Knowledge Base</li>
-</ol>
+                </article>
+            <article>
+                <div class="polaroid">
+                    <img src="img/fkr0389.jpg">
+                    <div>Felix Krause</div>
+                </div>
             </article>
             <article >
-                <h1>This is Felix Kah</h1>
-                <ol>
-                    <li>About Me</li>
-                    <li>Projects</li>
-                    <ol>
-                        <li>
-                            ShapeStacker
-                        </li>
-                        <li>
-                            ShapeStacker IOS
-                        </li>
-                        <li>
-                            Universal Sticker Tool IOS
-                        </li>
-                    </ol>
-                    <li>Knowledge Base</li>
-                </ol>
+                <h1>...this guy is for hire!</h1>
+                <h2>Skillset</h2>
+                <ul>
+                    <li>Full Stack HTML Deveoper / Consultant</li>
+                    <li>Full Stack SharePoint On Prem Developer / Consultant</li>
+                    <li>O365 Developer / Consultant</li>
+                    <li>Swift Developer</li>
+                    <li>Python Developer</li>
+                </ul>
+                <h2>Education & Hobbies</h2>
+                <ul>
+                    <li>Mathematician</li>
+                    <li>Environment Activist</li>
+                    <li>ADHD Coach</li>
+                    <li>Dremel Power Tool Enthusiast</li>
+                </ul>
+                <h2>Pros</h2>
+                <ul>
+                    <li>Empathy: Understand the "Needs" behind "Wants"</li>
+                    <li>Intelligence: Looks behind the mirror</li>
+                    <li>Optimism: Always thinks the best of You</li>
+                    <li>Hyper Focus: If it bugs me, i will solve it</li>
+                </ul>
+                <h2>Cons</h2>
+                <ul>
+                    <li>Duty Work: Don't let me do shit, plz</li>
+                    <li>Paper Work: Almost the same as above</li>
+                </ul>
             </article>
         </section>
         <section id="section1" style="background-color:#C64191">
             <article>
                 <h1>Soon to come.</h1>
-                <ol>
-                    <li>About Me</li>
-                    <li>Projects</li>
+                    <h2>Projects</h2>
                     <ol>
                         <li>
                             ShapeStacker
@@ -239,50 +217,18 @@
                             Universal Sticker Tool IOS
                         </li>
                     </ol>
-                    <li>Knowledge Base</li>
-                </ol>
             </article>
         </section>
         <section id="section2" style="background-color:#F0F3BD">
             <article>
-                <h1>Soon to come.</h1>
-                <ol>
-                    <li>About Me</li>
-                    <li>Projects</li>
-                    <ol>
-                        <li>
-                            ShapeStacker
-                        </li>
-                        <li>
-                            ShapeStacker IOS
-                        </li>
-                        <li>
-                            Universal Sticker Tool IOS
-                        </li>
-                    </ol>
-                    <li>Knowledge Base</li>
+                    <h1>Soon to come.</h1>
+                    <h2><a href="/kb">MarkDown here</a></h2>
                 </ol>
             </article>
         </section>
         <section id="section3">
             <article>
-                <h1>Soon to come.</h1>
-                <ol>
-                    <li>About Me</li>
-                    <li>Projects</li>
-                    <ol>
-                        <li>
-                            ShapeStacker
-                        </li>
-                        <li>
-                            ShapeStacker IOS
-                        </li>
-                        <li>
-                            Universal Sticker Tool IOS
-                        </li>
-                    </ol>
-                    <li>Knowledge Base</li>
-                </ol>
+                <h1>Disclaimer, legal stuff.</h1>
             </article>
         </section>
 
@@ -300,7 +246,7 @@
             
             
 
-        Fk.sideScroller = new function () {
+        Fk.SideScroll = new function () {
             let self = this;
 
             this.sections = document.querySelectorAll("section");
@@ -312,13 +258,14 @@
                     i = 0;
                     section.articles.forEach(article => {
                         if (i < articleId) {
-                            article.style.transform = `translateX(${articleId * -80}vw)`
+                            article.style.transform = `rotate(-5deg) translateX(${articleId * - 90}vw)`
+                            // article.style.zIndex = 1;
                         } else if (i == articleId) {
-                            article.style.transform = `translateX(${articleId * -80}vw)`
-                            article.style.zIndex = 1000;
+                            article.style.transform = `translateX(${articleId * -90}vw)`
+                            // article.style.zIndex = 1000;
                         } else {
-                            article.style.transform = `rotate(10deg) translateX(${articleId * -80}vw)`
-                            article.style.zIndex = 1;
+                            article.style.transform = `rotate(5deg) translateX(${articleId * - 90}vw)`
+                            // article.style.zIndex = 1;
                         }
                         n++;
                         i++;
@@ -328,19 +275,22 @@
             }
 
             this.selectArticle = function(event) {
-                event.stopPropagation();
-                let articleId = event.target.closest("article").dataset.index;
-                let sectionId = event.target.closest("section").dataset.index;
+                let articleId = parseInt(event.target.closest("article").dataset.index);
+                let sectionId = parseInt(event.target.closest("section").dataset.index);
 
                 self.selectArticleById(sectionId, articleId);
             }
 
-            this.selectPreviousArticle = function(e, sender) {
-                console.info("test");
+            this.selectNextArticle = function(e) {
+                let sectionId = self.selectedSectionId;
+                let section = self.sections[sectionId];
+                let articleId = section.selectedArticle + 1 ;
+                self.selectArticleById(sectionId, articleId);
+            }
+            this.selectPreviousArticle = function(e) {
                 let sectionId = self.selectedSectionId;
                 let section = self.sections[sectionId];
                 let articleId = section.selectedArticle - 1 ;
-                console.info(sectionId, articleId);
                 self.selectArticleById(sectionId, articleId);
             }
 
@@ -355,14 +305,22 @@
                     
                     section.articles.forEach(article => {
                         article.dataset.index = articleId;
-                        article.style.transformOrigin = `${((articleId - 1) * - 80) - 20}vw ${articleId * - 5}vw`;
+                        article.style.transformOrigin = `${((articleId - 1) * - 90) - 20}vw ${articleId * - 5}vw`;
                         
-                        article.addEventListener("click", self.selectArticle, true)
+                        article.addEventListener("click", self.selectArticle, true);
                         if (articleId > 0) {
-                            let backButton = document.createElement("div") 
+                            let backButton = document.createElement("div") ;
+                            backButton.innerText = "<";
                             backButton.classList.add("back-button");
-                            backButton.addEventListener("click", self.selectPreviousArticle, true)
+                            backButton.addEventListener("click", self.selectPreviousArticle, false);
                             article.appendChild(backButton);
+                        }
+                        if (articleId < section.articles.length - 1) {
+                            let nextButton = document.createElement("div") ;
+                            nextButton.innerText = ">";
+                            nextButton.classList.add("next-button");
+                            nextButton.addEventListener("click", self.selectNextArticle, false);
+                            article.appendChild(nextButton);
                         }
                         articleId++
 
@@ -371,7 +329,7 @@
                     self.selectArticleById(sectionId, 0);
 
                     section.articles.forEach(article => {
-                        article.style.transition = "all .3s linear";
+                        article.style.transition = "all .3s ease-out";
                     });
                     sectionId++
                 });
