@@ -20,7 +20,7 @@ body, html {
     z-index: 200;
 	list-style: none;
 	padding: 0;
-	position: absolute;	
+	position: fixed;	
     top: 50%;
     -webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
