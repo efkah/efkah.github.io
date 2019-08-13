@@ -1,3 +1,11 @@
-# Knowledge Base
+# [Knowledge Base](../kb/)
 
-## [Fix Start Menu Bugs](articles/fix-start-menu-bugs.md)
+## Mastering HTML
+
+## Swift Tips & Tricks
+
+## SharePoint related articles
+
+## Administrating Mac/Windows
+
+### [Fix Start Menu Bugs](../kb/articles/fix-start-menu-bugs.md)

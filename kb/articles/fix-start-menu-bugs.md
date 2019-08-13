@@ -1,13 +1,18 @@
-# Fix Start Menu Bugs
+# [Knowledge Base](../kb/)
+
+## Fix Start Menu Bugs
     
-## Problem
+### Problem
+On a Development Machine, i was not able to add Start Menu Entries. New Programs did not add themselfs to Start Menu either. All other members of the company had similar issues, many have thought of a unresovable bug because of wrong setup.
 
-## Cause
+### Cause
+Simply put, users were not allowed to add Start Menu Entries.
 
-## Solution	
- *[] Rightclick, Run: gpedit.msc
- *[] Navigate to: Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options
- *[] Enable Policy: User Account Control: Run all administrators in Admin Approval Mode
- *[] Reboot.
+### Solution	
+ *[ ] Rightclick, Run: gpedit.msc
+ *[ ] Navigate to: Computer Configuration > Windows Settings > Security Settings > Local Policies > Security Options
+ *[ ] Enable Policy: User Account Control: Run all administrators in Admin Approval Mode
+ *[ ] Reboot.
 
-## Action
+### Action
+I wrote this little Article to prevent the wrong setup for the future.

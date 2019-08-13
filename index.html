@@ -1,88 +1,158 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>efkah.github.io</title>
-        <link rel="stylesheet" type="text/css" href="css/full-page-scroll.css">
-        <style>
-            /*
+
+<head>
+    <title>efkah.github.io</title>
+    <link rel="stylesheet" type="text/css" href="css/full-page-scroll.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/full-side-scroll.css"> -->
+    <style>
+        /*
                 @dark: #363020;
                 @bright: #ecf8f8;
                 @tonic: #0FC3C6;
                 @subdominant: #F0F3BD
                 @dominant: #C64191
             */
-            
-            body {
-                color: #363020;
-                background-color: #ecf8f8;
-                font-family: sans-serif;
-                font-size: 2vh;
-            }
-            header {
-                background-color: #0FC3C6;
-                background: linear-gradient(140deg, #0FC3C6 10%, #C64191 61.8%, #F0F3BD 90%);
-                padding: 1vh 1vw;
-                color: black;
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                height: 6vh;
-                margin-bottom: 2em;
-                font-family: monospace;
-                z-index: 100;
-                border-bottom: 1px solid #363020BB;
-                user-select: none;
-                font-size: 1.34vh
-                
-            }
-            header>h1 {
-                margin-top: 0;
-                padding-top: .5em;
-                position: relative;
-                top: 0;
-                left: 0;
-            }
-            header>img {
-                height: 6vh;
-                float: left;
-                padding-right: 2vw;
-                padding-left: 1vw;
-            }
 
-            main {
-                position: fixed;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right:0;
-                margin-top: 8vh;
-                z-index: 10;
-            }
-            main h1 {
-                margin-top: 0;
-            }
-            main article {
-                padding-top: 2vh;
-                padding-left: 1vw;
-            }
-            main ol {
-                margin-left: 2vw;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <img src="img/logo_temp.png" />
-            <h1>efkah.github.io</h1>
-        </header>  
-        <main id="main" class="scroll-container ">
-        <section style="background-color: #0FC3C6"> 
+        body {
+            color: #363020;
+            background-color: #ecf8f8;
+            font-family: sans-serif;
+            font-size: 2vh;
+            background-color: #0FC3C6;
+            background: linear-gradient(120deg, #0FC3C6, #C64191 38.2%, #F0F3BD 61.8%, #0FC3C6 100%);
+        }
+
+        header {
+            /* background-color: #0FC3C6;
+            background: linear-gradient(140deg, #0FC3C6 10%, #C64191 61.8%, #F0F3BD 90%); */
+            padding: 1vh 1vw;
+            color: black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6vh;
+            margin-bottom: 2em;
+            font-family: monospace;
+            z-index: 100;
+            user-select: none;
+            font-size: 1.34vh
+        }
+
+        header>h1 {
+            margin-top: 0;
+            padding-top: .5em;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        header>img {
+            height: 6vh;
+            float: left;
+            padding-right: 2vw;
+            padding-left: 1vw;
+        }
+
+        main {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin-top: 8vh;
+            z-index: 10;
+        }
+        main>section {
+            border-top: 1px solid #363020BB;
+            position: relative;
+        }
+        main>#section0 {
+            display: grid;
+            grid-template-columns: 80vw 80vw 80vw;
+            background-color: #0FC3C6
+
+        }
+
+        main h1 {
+            margin-top: 0;
+        }
+
+        main article {
+            padding: 2vh 2vw;
+        }
+
+        main ol {
+            margin-left: 2vw;
+        }
+
+        article {
+            overflow-y: hidden;
+            transition: unset;
+        }
+
+        article .back-button {
+            z-index: 1001;
+            width: 6vh;
+            height: 6vh;
+            background-color: red;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/logo_temp.png" />
+        <h1>efkah.github.io</h1>
+    </header>
+    <main id="main" class="scroll-container ">
+        <section id="section0" class="item-container">
             <article>
-                <h1>Soon to come.</h1>
+                <h1>This is Felix Kah</h1>
                 <ol>
                     <li>About Me</li>
                     <li>Projects</li>
+                    <ol>
+                        <li>
+                            ShapeStacker
+                        </li>
+                        <li>
+                            ShapeStacker IOS
+                        </li>
+                        <li>
+                            Universal Sticker Tool IOS
+                        </li>
+                    </ol>
+                    <li>Knowledge Base</li>
+                </ol>
+            </article>
+            <article >
+                <h1>This is Felix Kah</h1>
+                <ol>
+                    <li>About Me</li>
+                    <li>Projects</li>
+                    <ol>
+                        <li>
+                            ShapeStacker
+                        </li>
+                        <li>
+                            ShapeStacker IOS
+                        </li>
+                        <li>
+                            Universal Sticker Tool IOS
+                        </li>
+                    </ol>
+                    <li>Knowledge Base</li>
+                </ol>
+                    <h1>This is Felix Kah</h1>
+                    <ol>
+                        <li>About Me</li>
+                        <li>Projects</li>
                         <ol>
                             <li>
                                 ShapeStacker
@@ -94,85 +164,234 @@
                                 Universal Sticker Tool IOS
                             </li>
                         </ol>
+                        <li>Knowledge Base</li>
+                            <li>Knowledge Base</li>
+                </ol>
+                <h1>This is Felix Kah</h1>
+                <ol>
+                    <li>About Me</li>
+                    <li>Projects</li>
+                    <ol>
+                        <li>
+                            ShapeStacker
+                        </li>
+                        <li>
+                            ShapeStacker IOS
+                        </li>
+                        <li>
+                            Universal Sticker Tool IOS
+                        </li>
+                    </ol>
+                    <li>Knowledge Base</li>
+        </ol>
+        <h1>This is Felix Kah</h1>
+        <ol>
+            <li>About Me</li>
+            <li>Projects</li>
+            <ol>
+                <li>
+                    ShapeStacker
+                </li>
+                <li>
+                    ShapeStacker IOS
+                </li>
+                <li>
+                    Universal Sticker Tool IOS
+                </li>
+            </ol>
+            <li>Knowledge Base</li>
+</ol>
+            </article>
+            <article >
+                <h1>This is Felix Kah</h1>
+                <ol>
+                    <li>About Me</li>
+                    <li>Projects</li>
+                    <ol>
+                        <li>
+                            ShapeStacker
+                        </li>
+                        <li>
+                            ShapeStacker IOS
+                        </li>
+                        <li>
+                            Universal Sticker Tool IOS
+                        </li>
+                    </ol>
                     <li>Knowledge Base</li>
                 </ol>
             </article>
-            </section>
-                <section style="background-color:#C64191">
-                    <article>
-                    <h1>Soon to come.</h1>
+        </section>
+        <section id="section1" style="background-color:#C64191">
+            <article>
+                <h1>Soon to come.</h1>
+                <ol>
+                    <li>About Me</li>
+                    <li>Projects</li>
                     <ol>
-                        <li>About Me</li>
-                        <li>Projects</li>
-                            <ol>
-                                <li>
-                                    ShapeStacker
-                                </li>
-                                <li>
-                                    ShapeStacker IOS
-                                </li>
-                                <li>
-                                    Universal Sticker Tool IOS
-                                </li>
-                            </ol>
-                        <li>Knowledge Base</li>
+                        <li>
+                            ShapeStacker
+                        </li>
+                        <li>
+                            ShapeStacker IOS
+                        </li>
+                        <li>
+                            Universal Sticker Tool IOS
+                        </li>
                     </ol>
-                </article>
-                </section>
-                <section style="background-color:#F0F3BD">
-                    <article>
-                        <h1>Soon to come.</h1>
-                        <ol>
-                            <li>About Me</li>
-                            <li>Projects</li>
-                                <ol>
-                                    <li>
-                                        ShapeStacker
-                                    </li>
-                                    <li>
-                                        ShapeStacker IOS
-                                    </li>
-                                    <li>
-                                        Universal Sticker Tool IOS
-                                    </li>
-                                </ol>
-                            <li>Knowledge Base</li>
-                        </ol>
-                    </article>
-                    </section>
-                    <section>
-                            <article>
-                                <h1>Soon to come.</h1>
-                            <ol>
-                                <li>About Me</li>
-                                <li>Projects</li>
-                                    <ol>
-                                        <li>
-                                            ShapeStacker
-                                        </li>
-                                        <li>
-                                            ShapeStacker IOS
-                                        </li>
-                                        <li>
-                                            Universal Sticker Tool IOS
-                                        </li>
-                                    </ol>
-                                <li>Knowledge Base</li>
-                            </ol>
-                        </article>
-                        </section>
+                    <li>Knowledge Base</li>
+                </ol>
+            </article>
+        </section>
+        <section id="section2" style="background-color:#F0F3BD">
+            <article>
+                <h1>Soon to come.</h1>
+                <ol>
+                    <li>About Me</li>
+                    <li>Projects</li>
+                    <ol>
+                        <li>
+                            ShapeStacker
+                        </li>
+                        <li>
+                            ShapeStacker IOS
+                        </li>
+                        <li>
+                            Universal Sticker Tool IOS
+                        </li>
+                    </ol>
+                    <li>Knowledge Base</li>
+                </ol>
+            </article>
+        </section>
+        <section id="section3">
+            <article>
+                <h1>Soon to come.</h1>
+                <ol>
+                    <li>About Me</li>
+                    <li>Projects</li>
+                    <ol>
+                        <li>
+                            ShapeStacker
+                        </li>
+                        <li>
+                            ShapeStacker IOS
+                        </li>
+                        <li>
+                            Universal Sticker Tool IOS
+                        </li>
+                    </ol>
+                    <li>Knowledge Base</li>
+                </ol>
+            </article>
+        </section>
 
+
+        <script src="js/full-page-scroll.js"></script>
+        <script type="text/javascript">
+        var Fk = Fk || {};
+        Fk.PageScroll = new fullPageScroll({
+                mainElement: document.getElementById("main"),
+                displayDots: true,
+                dotsPosition: 'right',
+                animateTime: 0.7,
+                animateFunction: 'ease-in'
+            });
             
-	<script src="js/full-page-scroll.js"></script>
-	<script type="text/javascript">
-		new fullScroll({
-			mainElement: 'main',
-			displayDots: true,
-			dotsPosition: 'right',
-			animateTime: 0.7,
-			animateFunction: 'ease'
-		});
-	</script>
+            
+
+        Fk.sideScroller = new function () {
+            let self = this;
+
+            this.sections = document.querySelectorAll("section");
+
+            this.selectArticleById = function(sectionId, articleId) {
+                    self.selectedSectionId = sectionId;
+                    let section = self.sections[sectionId]
+                    var n = section.selectedArticle - articleId;
+                    i = 0;
+                    section.articles.forEach(article => {
+                        if (i < articleId) {
+                            article.style.transform = `translateX(${articleId * -80}vw)`
+                        } else if (i == articleId) {
+                            article.style.transform = `translateX(${articleId * -80}vw)`
+                            article.style.zIndex = 1000;
+                        } else {
+                            article.style.transform = `rotate(10deg) translateX(${articleId * -80}vw)`
+                            article.style.zIndex = 1;
+                        }
+                        n++;
+                        i++;
+                    });
+                    section.selectedArticle = articleId;
+
+            }
+
+            this.selectArticle = function(event) {
+                event.stopPropagation();
+                let articleId = event.target.closest("article").dataset.index;
+                let sectionId = event.target.closest("section").dataset.index;
+
+                self.selectArticleById(sectionId, articleId);
+            }
+
+            this.selectPreviousArticle = function(e, sender) {
+                console.info("test");
+                let sectionId = self.selectedSectionId;
+                let section = self.sections[sectionId];
+                let articleId = section.selectedArticle - 1 ;
+                console.info(sectionId, articleId);
+                self.selectArticleById(sectionId, articleId);
+            }
+
+            var init = function () {
+                var sectionId = 0;
+                
+                
+                self.sections.forEach(section => {
+                    section.articles = document.querySelectorAll(`#section${sectionId}>article`)
+                    let articleId = 0;
+                    section.selectedArticle = 0
+                    
+                    section.articles.forEach(article => {
+                        article.dataset.index = articleId;
+                        article.style.transformOrigin = `${((articleId - 1) * - 80) - 20}vw ${articleId * - 5}vw`;
+                        
+                        article.addEventListener("click", self.selectArticle, true)
+                        if (articleId > 0) {
+                            let backButton = document.createElement("div") 
+                            backButton.classList.add("back-button");
+                            backButton.addEventListener("click", self.selectPreviousArticle, true)
+                            article.appendChild(backButton);
+                        }
+                        articleId++
+
+                    })
+                    
+                    self.selectArticleById(sectionId, 0);
+
+                    section.articles.forEach(article => {
+                        article.style.transition = "all .3s linear";
+                    });
+                    sectionId++
+                });
+            }
+            init();
+        }
+            </script>
+        <!-- <script src="js/full-side-scroll.js"></script>
+        <script type="text/javascript">
+            new fullSideScroll({
+                mainElement: document.getElementById("main>#section1"),
+                sectionElements: document.querySelectorAll("main>#section1>article"),
+                displayBars: true,
+                id: "page1",
+                dotsPosition: 'left',
+                animateTime: 0.4,
+                animateFunction: 'ease-out'
+            }); -->
+        </script>
     </main>
-    </body>
+</body>
+
 </html>

@@ -7,7 +7,7 @@
 	/**
 	 * Full scroll main function
 	 */
-	var fullPageScroll = function (params) {
+	var fullSideScroll = function (params) {
 		/**
 		 * Main div
 		 * @type {Object}
@@ -18,7 +18,7 @@
 		 * Sections divclass
 		 * @type {Array}
 		 */
-		var sections = document.querySelectorAll('main>section');
+		var sections = main.getElementsByTagName('section');
 		
 		var id = ""
 		/**
@@ -33,8 +33,8 @@
 			maxPosition: sections.length - 1,
 			id: params.id || id,
 			currentPosition: 0,
-			displayDots: typeof params.displayDots != 'undefined' ? params.displayDots : true,
-			dotsPosition: params.dotsPosition || 'left'
+			displayBars: typeof params.displayBars != 'undefined' ? params.displayBars : true,
+			barsPosition: params.barsPosition || 'left'
 		};
 
 		this.defaults = defaults;
@@ -47,10 +47,10 @@
 	/**
 	 * Init plugin
 	 */
-	fullPageScroll.prototype.init = function () {
+	fullSideScroll.prototype.init = function () {
 		this.buildPublicFunctions()
 			.buildSections()
-			.buildDots()
+			.buildBars()
 			.addEvents();
 
 		var anchor = location.hash.replace('#', '').split('/')[0];
@@ -61,9 +61,9 @@
 
 	/**
 	 * Build sections
-	 * @return {Object} this(fullPageScroll)
+	 * @return {Object} this(fullSideScroll)
 	 */
-	fullPageScroll.prototype.buildSections = function () {
+	fullSideScroll.prototype.buildSections = function () {
 		var sections = this.defaults.sections;
 		for (var i = 0; i < sections.length; i++) {
 			sections[i].setAttribute('data-index', i);
@@ -72,22 +72,14 @@
 	};
 
 	/**
-	 * Build dots navigation
-	 * @return {Object} this (fullPageScroll)
+	 * Build bars navigation
+	 * @return {Object} this (fullSideScroll)
 	 */
-	fullPageScroll.prototype.buildDots = function () {		
-		this.navigationContainer = document.createElement("div") 
-		this.navigationContainer.className = this.updateClass(1, this.defaults.dotsPosition == 'right' ? 'navigation-right' : 'navigation-left', this.navigationContainer.className);
-		
-		this.navigationContainer.appendChild(document.createElement('div'));
+	fullSideScroll.prototype.buildBars = function () {		
 		this.ul = document.createElement('ul');
-		this.navigationContainer.appendChild(this.ul);
-		// this.navigationContainer.appendChild(document.createElement('div'));
-		// this.ul.className = this.updateClass(1, this.defaults.dotsPosition == 'right' ? 'navigation-right' : 'navigation-left', this.ul.className);
 		
-
-
-		this.ul.className = this.updateClass(1, 'dots', this.ul.className);
+		this.ul.className = this.updateClass(1, 'bars', this.ul.className);
+		this.ul.className = this.updateClass(1, this.defaults.barsPosition == 'right' ? 'bars-right' : 'bars-left', this.ul.className);
 		this.ul.className = this.updateClass(1, this.defaults.id, this.ul.className)
 
 		var _self = this;
@@ -101,10 +93,11 @@
 			li.appendChild(a);
 			_self.ul.appendChild(li);
 		}
+
 		this.ul.childNodes[0].firstChild.className = this.updateClass(1, 'active', this.ul.childNodes[0].firstChild.className);
 
-		if (this.defaults.displayDots) {
-			document.body.appendChild(this.navigationContainer);
+		if (this.defaults.displayBars) {
+			document.body.appendChild(this.ul);
 		}
 
 		return this;
@@ -112,9 +105,9 @@
 
 	/**
 	 * Add Events
-	 * @return {Object} this(fullPageScroll)
+	 * @return {Object} this(fullSideScroll)
 	 */
-	fullPageScroll.prototype.addEvents = function () {
+	fullSideScroll.prototype.addEvents = function () {
 		
 		if (document.addEventListener) {
 			document.addEventListener('mousewheel', this.mouseWheelAndKey, false);
@@ -146,7 +139,7 @@
 	 * Build public functions
 	 * @return {[type]} [description]
 	 */
-	fullPageScroll.prototype.buildPublicFunctions = function () {
+	fullSideScroll.prototype.buildPublicFunctions = function () {
 		var mTouchStart = 0;
 		var mTouchEnd = 0;
 		var _self = this;
@@ -218,12 +211,14 @@
 			var animateFunction = this.defaults.animateFunction;
 			var position = this.defaults.currentPosition * 100;
 
-			this.defaults.sections.forEach(el => {
-				el.style.transition = 'all ' + animateTime + 's linear';
-				el.style.transform = 'translateY(-' + position + '%)';
-			})
-			var currentSection = document.getElementById("section" + this.defaults.currentPosition);
-			currentSection.style.transition = 'all ' + animateTime + 's ' + animateFunction + "";
+			this.defaults.container.style.webkitTransform = 'translateY(-' + position + '%)';
+			this.defaults.container.style.mozTransform = 'translateY(-' + position + '%)';
+			this.defaults.container.style.msTransform = 'translateY(-' + position + '%)';
+			this.defaults.container.style.transform = 'translateY(-' + position + '%)';
+			this.defaults.container.style.webkitTransition = 'all ' + animateTime + 's ' + animateFunction;
+			this.defaults.container.style.mozTransition = 'all ' + animateTime + 's ' + animateFunction;
+			this.defaults.container.style.msTransition = 'all ' + animateTime + 's ' + animateFunction;
+			this.defaults.container.style.transition = 'all ' + animateTime + 's ' + animateFunction;
 
 			for (var i = 0; i < this.ul.childNodes.length; i++) {
 					this.ul.childNodes[i].firstChild.className = this.updateClass(2, 'active', this.ul.childNodes[i].firstChild.className);
@@ -254,5 +249,5 @@
 
 		return this;
 	};
-	window.fullPageScroll = fullPageScroll;
+	window.fullSideScroll = fullSideScroll;
 })();
