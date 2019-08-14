@@ -8,10 +8,9 @@
 
 body {
     color: #363020;
-    background-color: #ecf8f8;
     font-family: sans-serif;
     font-size: 2vh;
-    background-color: #0FC3C6;
+    background-color: #ecf8f8;
     background: linear-gradient(120deg, #0FC3C6, #C64191 38.2%, #F0F3BD 61.8%, #0FC3C6 100%);
 }
 
@@ -65,12 +64,54 @@ main>section {
 
 main>#section0 {
     display: grid;
-    grid-template-columns: 90vw 90vw 90vw;
     background-color: #0FC3C6
 }
 
+main>#section0 h1 {
+    background-color: #C64191;
+}
+
+main>#section1 {
+    display: grid;
+    background-color: #C64191;
+}
+
+main>#section1 h1 {
+    background-color: #F0F3BD;
+}
+
+main>#section2 {
+    display: grid;
+    background-color: #F0F3BD
+}
+
+main>#section2 h1 {
+    background-color: #0FC3C6;
+}
+
+main>#section3 {
+    display: grid;
+}
+
+main>#section3 h1 {
+    background-color: #ecf8f8;
+    background: linear-gradient(120deg, #0FC3C6, #C64191 38.2%, #F0F3BD 61.8%, #0FC3C6 100%);
+}
+
 main h1 {
-    margin-top: 0;
+    margin-top: -1vh;
+    font-family: monospace;
+    padding-top: 2vh;
+    transform: rotate(-2deg) translateY(4vh);
+    margin-left: -5vw;
+    padding-left: 5vw;
+    margin-right: -5vw;
+    padding-right: 5vw;
+    margin-bottom: 10vh;
+    padding-bottom: 2vh;
+    border: .1em solid #363020;
+    transform-origin: top center;
+}
 }
 
 main article {
@@ -89,29 +130,37 @@ article {
 article .back-button {
     z-index: 10000;
     position: absolute;
-    right: 45vw;
+    right: 45%;
     cursor: pointer;
-    margin-right: 5vw;
+    margin-right: 15%;
     font-family: monospace;
     font-size: 6vh;
     font-weight: bold;
     text-shadow: 0 0 .5vh #FFFFFF;
     bottom: 15vh;
-    width: 50vw;
+    width: 50%;
+    text-align: end;
+    color: #363020DD;
 }
 
 article .next-button {
     z-index: 10000;
     position: absolute;
-    left: 45vw;
-    margin-left: 5vw;
+    left: 45%;
+    margin-left: 15%;
     cursor: pointer;
     font-family: monospace;
     font-size: 6vh;
     font-weight: bold;
     text-shadow: 0 0 .5vh #FFFFFF;
     bottom: 15vh;
-    width: 50vw;
+    width: 50%;
+    text-align: start;
+    color: #363020DD;
+}
+
+.sidescroll-nav-hidden .sidescroll-nav {
+    display: none;
 }
 
 .polaroid {
@@ -121,7 +170,7 @@ article .next-button {
     background-color: white;
     transform: rotate(-2deg) scale(1.2);
     transform-origin: 0 0;
-    box-shadow: 0.1em 0.1em 0.4em black;
+    box-shadow: 0.1em 0.1em 0.4em #363020;
     margin-top: 2vh;
 }
 
