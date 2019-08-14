@@ -109,6 +109,7 @@
             font-size: 6vh;
             font-weight: bold;
             text-shadow: 0 0 .5vh #FFFFFF;
+            bottom: 10vh;
         }
         article .next-button {
             z-index: 1001;
@@ -121,14 +122,15 @@
             font-size: 6vh;
             font-weight: bold;
 	        text-shadow: 0 0 .5vh #FFFFFF;
+            bottom: 10vh;
         }
 
-        @media all and (min-width:0px) and (max-width: 320px) {
+        @media all and (min-width:640px) {
             article .back-button {
-                bottom: 10vh;
+                bottom: 0;
             }
             article .next-button {
-                bottom: 10vh;
+                bottom: 0;
             }
         }
         .polaroid {
