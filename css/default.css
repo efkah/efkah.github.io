@@ -1,0 +1,141 @@
+/*
+                @dark: #363020;
+                @bright: #ecf8f8;
+                @tonic: #0FC3C6;
+                @subdominant: #F0F3BD
+                @dominant: #C64191
+            */
+
+body {
+    color: #363020;
+    background-color: #ecf8f8;
+    font-family: sans-serif;
+    font-size: 2vh;
+    background-color: #0FC3C6;
+    background: linear-gradient(120deg, #0FC3C6, #C64191 38.2%, #F0F3BD 61.8%, #0FC3C6 100%);
+}
+
+header {
+    /* background-color: #0FC3C6;
+                background: linear-gradient(140deg, #0FC3C6 10%, #C64191 61.8%, #F0F3BD 90%); */
+    padding: 1vh 1vw;
+    color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6vh;
+    margin-bottom: 2em;
+    font-family: monospace;
+    z-index: 100;
+    user-select: none;
+    font-size: 1.34vh
+}
+
+header>h1 {
+    margin-top: 0;
+    padding-top: .5em;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+header>img {
+    height: 6vh;
+    float: left;
+    padding-right: 2vw;
+    padding-left: 1vw;
+}
+
+main {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: 8vh;
+    z-index: 10;
+}
+
+main>section {
+    border-top: 1px solid #363020BB;
+    position: relative;
+    padding-left: 5vw;
+}
+
+main>#section0 {
+    display: grid;
+    grid-template-columns: 90vw 90vw 90vw;
+    background-color: #0FC3C6
+}
+
+main h1 {
+    margin-top: 0;
+}
+
+main article {
+    padding: 2vh 2vw;
+}
+
+main ol {
+    margin-left: 2vw;
+}
+
+article {
+    overflow: hidden;
+    height: 88vh;
+}
+
+article .back-button {
+    z-index: 1001;
+    position: absolute;
+    right: 45vw;
+    cursor: pointer;
+    margin-right: .5vh;
+    font-family: monospace;
+    font-size: 6vh;
+    font-weight: bold;
+    text-shadow: 0 0 .5vh #FFFFFF;
+    bottom: 15vh;
+}
+
+article .next-button {
+    z-index: 1001;
+    position: absolute;
+    left: 45vw;
+    margin-left: .5vh;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 6vh;
+    font-weight: bold;
+    text-shadow: 0 0 .5vh #FFFFFF;
+    bottom: 15vh;
+}
+
+.polaroid {
+    padding: 1em;
+    max-width: fit-content;
+    max-height: fit-content;
+    background-color: white;
+    transform: rotate(-2deg) scale(1.2);
+    transform-origin: 0 0;
+    box-shadow: 0.1em 0.1em 0.4em black;
+    margin-top: 2vh;
+}
+
+.polaroid>img {
+    object-fit: cover;
+    max-height: 60vh;
+    max-width: 60vw;
+    object-position: top center;
+}
+
+.polaroid>div {
+    margin-top: .2em;
+    font-size: 2em;
+    width: inherit;
+    text-align: center;
+    font-family: monospace;
+    transform: rotate(-2deg);
+    font-weight: bold;
+}
