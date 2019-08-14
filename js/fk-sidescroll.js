@@ -1,192 +1,201 @@
 var Fk = Fk || {};
-Fk.SideScroll = new function () {
-    let self = this;
-    this.viewWidth = (window.innerWidth > 980) ? 40 : 90 ;
-    this.sections = document.querySelectorAll("section");
+Fk.sideScroll = function (settings) {
+    let self = this, fk = true, ns = "Fk.sideScroll";
 
-    this.selectArticleById = function (sectionId, articleId) {
-        let section = self.sections[sectionId];
-        self.selectedSectionId = sectionId;
-        if (0 < articleId < section.articles.length - 1) {
+    this.Settings = settings || {
+        ViewWidth: (window.innerWidth > 980) ? 40 : 90,
+        Container: document.querySelector("#section0"),
+        Items: document.querySelectorAll("#section0>article")
+    }
+
+    this.selectItemById = function (itemId) {
+        self.selectedItem = itemId;
         i = 0;
-        section.articles.forEach(article => {
-            if (i < articleId) {
-                article.style.transform = `rotate(${(i - articleId) * 5}deg) translateX(${articleId * - self.viewWidth}vw)`;
-                article.style.backgroundColor = "#00000011";
-                article.style.borderRadius = "1vw";
-                // article.style.boxShadow = "0.1em 0.1em 0.4em #363020";
-                article.style.zIndex = 1400;
-            } else if (i == articleId) {
-                article.style.transform = `translateX(${articleId * -self.viewWidth}vw)`;
-                article.style.backgroundColor = "unset";
-                article.classList.remove("sidescroll-nav-hidden");
-                // article.style.boxShadow = "unset";
-                article.style.zIndex = 1500;
+        self.Settings.Items.forEach(item => {
+            if (i < itemId) {
+                item.style.transform = `rotate(${(i - itemId) * 5}deg) translateX(${itemId * -self.Settings.ViewWidth}vw)`;
+                item.style.opacity = .9;
+                // item.style.boxShadow = "0.1em 0.1em 0.4em #363020";
+                item.style.zIndex = 1499;
+            } else if (i == itemId) {
+                item.style.transform = `translateX(${itemId * -self.Settings.ViewWidth}vw)`;
+                item.classList.remove("sidescroll-nav-hidden");
+                item.style.opacity = 1;
+                // item.style.boxShadow = "unset";
+                item.style.zIndex = 1500;
             } else {
-                article.style.transform = `rotate(${(i -articleId) * 5}deg) translateX(${articleId * - self.viewWidth}vw)`;
-                article.style.backgroundColor = "#FFFFFF22";
-                article.style.borderRadius = "1vw";
-                article.classList.add("sidescroll-nav-hidden");
-                // article.style.boxShadow = "0.1em 0.1em 0.4em #363020";
-                article.style.zIndex = 1600;
+                item.style.transform = `rotate(${(i -itemId) * 5}deg) translateX(${itemId * -self.Settings.ViewWidth}vw)`;
+                // item.style.opacity = 1 - ((i - itemId) * .2);
+                // item.style.backgroundColor = "#ecf8f866";
+                item.classList.add("sidescroll-nav-hidden");
+                item.style.zIndex = 1500 - i;
             }
             i++;
         });
-        section.selectedArticle = articleId;
-    }
+        
+        
+
+        fk || console.info(`${ns}.selectItemById(itemId)`, itemId);
     }
 
-    this.selectArticle = function (e) {
-    e.preventDefault();
-        let articleId = parseInt(e.target.closest("article").dataset.index);
-        let sectionId = parseInt(e.target.closest("section").dataset.index);
-
-        self.selectArticleById(sectionId, articleId);
+    this.selectNextItem = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        let itemId = self.selectedItem + 1;
+        self.selectItemById(itemId);
+        fk || console.info(`${ns}.selectNextItem(e)`, e);
+    }
+    this.selectPreviousItem = function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        let itemId = self.selectedItem - 1;
+        self.selectItemById(itemId);
+        fk || console.info(`${ns}.selectPreviousItem(e)`, e);
     }
 
-    this.selectNextArticle = function (e) {
-        let sectionId = self.selectedSectionId;
-        let section = self.sections[sectionId];
-        let articleId = section.selectedArticle + 1;
-        self.selectArticleById(sectionId, articleId);
-    }
-    this.selectPreviousArticle = function (e) {
-        let sectionId = self.selectedSectionId;
-        let section = self.sections[sectionId];
-        let articleId = section.selectedArticle - 1;
-        self.selectArticleById(sectionId, articleId);
-    }
-    
-    this.dragPoint = {
-            x: 0,
-            y: 0
-    }
-    this.dragStart = function (e) {
+    var dragHelper  = {x: 0, y: 0, itemId: null, isDragging: false }
+    var dragStartEventHandler = function (e) {
         e = e || window.event;
         e.preventDefault();
-        
-        self.dragPoint.sectionId = parseInt(e.target.closest("section").dataset.index);
 
-        let section = self.sections[self.dragPoint.sectionId];
-        self.dragPoint.articleId = section.selectedArticle;
-        console.info(self.dragPoint.articleId , self.dragPoint.sectionId);
+        dragHelper.itemId = self.selectedItem;
 
         if (e.type == 'touchstart') {
-            self.dragPoint.x = e.touches[0].clientX;
-            self.dragPoint.y = e.touches[0].clientY;
+            dragHelper.x = e.touches[0].clientX;
+            dragHelper.y = e.touches[0].clientY;
         } else {
-            self.dragPoint.x = e.clientX;
-            self.dragPoint.y = e.clientY;
-          document.onmouseup = self.dragEnd;
-          document.onmousemove = self.dragAction;
+            dragHelper.x = e.clientX;
+            dragHelper.y = e.clientY;
+            document.onmouseup = dragEndEventHandler;
+            document.onmousemove = dragActionEventHandler;
         }
-      }
-    
-      this.dragAction = function (e) {
+        fk || console.info(`${ns}.dragStartEventHandler(e)`, e);
+    }
+
+    var dragActionEventHandler = function (e) {
         e = e || window.event;
-        
+        e.preventDefault();
+        dragHelper.isDragging = true;
+
         let dirX = null;
         let dirY = null;
         if (e.type == 'touchmove') {
-            dirX = (e.touches[0].clientX - self.dragPoint.x) / (window.innerWidth);
-            dirY = (e.touches[0].clientY - self.dragPoint.y) / (window.innerHeight);
+            dirX = (e.touches[0].clientX - dragHelper.x) / (window.innerWidth);
+            dirY = (e.touches[0].clientY - dragHelper.y) / (window.innerHeight);
         } else {
-            if (e.clientX < self.dragPoint.x) {
-                dirX = (e.clientX - self.dragPoint.x) / self.dragPoint.x;
-            } else {{
-                dirX = (e.clientX - self.dragPoint.x) / (window.innerWidth - self.dragPoint.x);
+            if (e.clientX < dragHelper.x) {
+                dirX = (e.clientX - dragHelper.x) / dragHelper.x;
+            } else {
+                {
+                    dirX = (e.clientX - dragHelper.x) / (window.innerWidth - dragHelper.x);
+                }
             }
-            }
-            dirY = (e.clientY - self.dragPoint.y) / (window.innerHeight - self.dragPoint.y);
+            dirY = (e.clientY - dragHelper.y) / (window.innerHeight - dragHelper.y);
+        }
+        if (-1 > dirY < 1) {
+            self.selectItemById(dragHelper.itemId - dirX);
+        }
+        fk || console.info(`${ns}.dragActionEventHandler(e)`, e);
+    }
+
+    var dragEndEventHandler = function (e) {
+        e.preventDefault();
+
+        //     console.info(dragHelper.itemId , dragHelper.sectionId);
+        //     let dirX = (e.clientX - dragHelper.x) / (window.innerWidth / 10) || 0;
+        //     let dirY = (e.clientY - dragHelper.y) / (window.innerHeight / 10) || 0;
+        //     console.log(dirX, dirY)
+        //     if (-1 > dirY < 1) {
+        //         if (dirX < -1) {
+        //             console.log("self.selectPreviousItem()");
+        //             self.selectPreviousItem();
+        //         } else if (dirX > 1) {
+        //             console.log("self.selectNextItem()");
+        //             self.selectNextItem();
+        //         }        
+        //     }
+
+        // var bounds = (0 <= itemId) && (itemId <= (self.Settings.Items.length - 1));
+        // console.log(0, itemId, (self.Settings.Items.length - 1), bounds);
+
+        console.log(self.selectedItem);
+        if (self.selectedItem < 0) {
+            self.selectItemById(0);
+            dragHelper.isDragging = false;
+        } else if (self.selectedItem > (self.Settings.Items.length - 1)) {
+            self.selectItemById((self.Settings.Items.length - 1));
+            dragHelper.isDragging = false;
         }
         
-        if (-1 > dirY < 1) {
-            // if (-1 > dirX < 1) {
-                self.selectArticleById(self.selectedSectionId, self.dragPoint.articleId - dirX);
-            // } else if (dirX <= -1) {
-            //     self.selectNextArticle();
-            //     self.dragPoint.articleId = null;
-            //     document.onmouseup = null;
-            //     document.onmousemove = null;
-            // } else if (dirX >= 1) {
-            //     self.selectPreviousArticle();
-            //     self.dragPoint.articleId = null;
-            //     document.onmouseup = null;
-            //     document.onmousemove = null;
-            // }
-        }
-      }
-      
-      this.dragEnd = function (e) {
+            self.selectItemById(Math.round(self.selectedItem));
 
-    //     console.info(self.dragPoint.articleId , self.dragPoint.sectionId);
-    //     let dirX = (e.clientX - self.dragPoint.x) / (window.innerWidth / 10) || 0;
-    //     let dirY = (e.clientY - self.dragPoint.y) / (window.innerHeight / 10) || 0;
-    //     console.log(dirX, dirY)
-    //     if (-1 > dirY < 1) {
-    //         if (dirX < -1) {
-    //             console.log("self.selectPreviousArticle()");
-    //             self.selectPreviousArticle();
-    //         } else if (dirX > 1) {
-    //             console.log("self.selectNextArticle()");
-    //             self.selectNextArticle();
-    //         }        
-    //     }
-        self.dragPoint.articleId = null;
+        e.stopPropagation();
         document.onmouseup = null;
         document.onmousemove = null;
-      }
+        dragHelper.itemId = null;
+        fk || console.info(`${ns}.dragEndEventHandler(e)`, e);
+    }
+
+    var clickVisibleItemEventHandler = function (e) {
+        e.preventDefault();
+        let itemId = parseInt(e.target.closest("article").dataset.index);
+        if (dragHelper.isDragging) {
+            dragHelper.isDragging = false;
+        } else {
+            self.selectItemById(itemId);
+        }
+        fk || console.info(`${ns}.clickVisibleItemEventHandler(e)`, e);
+    }
 
     var init = function () {
-        var sectionId = 0;
+        let itemId = 0;
+        self.selectedItem = 0;
 
+        self.Settings.Items.forEach(item => {
+            item.dataset.index = itemId;
+            item.style.transformOrigin = `${((itemId - 1) * -self.Settings.ViewWidth)}vw ${itemId * 5}vw`;
 
-        self.sections.forEach(section => {
-            section.articles = document.querySelectorAll(`#section${sectionId}>article`)
-            let articleId = 0;
-            section.selectedArticle = 0
-
-            section.articles.forEach(article => {
-                article.dataset.index = articleId;
-                article.style.transformOrigin = `${((articleId - 1) * - self.viewWidth)}vw ${articleId * 5}vw`;
-
-                article.addEventListener("click", self.selectArticle, true);
-                if (articleId > 0) {
-                    let backButton = document.createElement("div");
-                    backButton.innerText = "<";
-                    backButton.classList.add("back-button");
-                    backButton.classList.add("sidescroll-nav");
-                    backButton.addEventListener("click", self.selectPreviousArticle, false);
-                    article.appendChild(backButton);
-                }
-                if (articleId < section.articles.length - 1) {
-                    let nextButton = document.createElement("div");
-                    nextButton.innerText = ">";
-                    nextButton.classList.add("next-button");
-                    nextButton.classList.add("sidescroll-nav");
-                    nextButton.addEventListener("click", self.selectNextArticle, false);
-                    article.appendChild(nextButton);
-                }
-                articleId++
-
-            });
-
-            self.selectArticleById(sectionId, 0);
-            let gridTemplateColumns = "";
-            section.articles.forEach(article => {
-                gridTemplateColumns += self.viewWidth + "vw ";
-                article.style.transition = "all .3s ease-out";
-            });
-            section.style.gridTemplateColumns = gridTemplateColumns;
-            // Mouse events
-            section.onmousedown = self.dragStart;
-            
-            // Touch events
-            section.addEventListener('touchstart', self.dragStart);
-            section.addEventListener('touchend', self.dragEnd);
-            section.addEventListener('touchmove', self.dragAction);
-            sectionId++
+            item.addEventListener("click", clickVisibleItemEventHandler, {capture: true});
+            if (itemId > 0) {
+                let backButton = document.createElement("div");
+                backButton.innerText = "<";
+                backButton.classList.add("back-button");
+                backButton.classList.add("sidescroll-nav");
+                backButton.addEventListener("click", self.selectPreviousItem, {capture: true});
+                item.appendChild(backButton);
+            }
+            if (itemId < self.Settings.Items.length - 1) {
+                let nextButton = document.createElement("div");
+                nextButton.innerText = ">";
+                nextButton.classList.add("next-button");
+                nextButton.classList.add("sidescroll-nav");
+                nextButton.addEventListener("click", self.selectNextItem, {capture: true});
+                item.appendChild(nextButton);
+            }
+            itemId++
         });
+
+        self.selectItemById(0);
+
+        let gridTemplateColumns = "";
+        self.Settings.Items.forEach(item => {
+            gridTemplateColumns += self.Settings.ViewWidth + "vw ";
+            item.style.transition = "all .3s ease-in";
+        });
+        self.Settings.Container.style.gridTemplateColumns = gridTemplateColumns;
+        // Mouse events
+        // self.Settings.Container.onmousedown = dragStartEventHandler;
+        self.Settings.Container.addEventListener('mousedown', dragStartEventHandler, {capture: false});
+
+        // Touch events
+        self.Settings.Container.addEventListener('touchstart', dragStartEventHandler, {capture: false});
+        self.Settings.Container.addEventListener('touchend', dragEndEventHandler, {capture: false});
+        self.Settings.Container.addEventListener('touchmove', dragActionEventHandler, {capture: false});
+
+        self.selectItemById(0, 0);
+        fk || console.info(`${ns}.init()`);
     }
+
     init();
+    fk || console.info(`${ns}(settings)`, settings);
 }

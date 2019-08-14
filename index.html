@@ -25,33 +25,16 @@
         <section id="section0">
             <article>
                 <h1>... welcome, stranger!</h1>
-                What you will soon find on this page:
-                <ol>
-                    <li>About Me (where you are)</li>
-                    <li>Projects</li>
-                    <li>Knowledge Base</li>
-                </ol>
+                <h2>This is Felix Krause</h2>
+                <p>
+                    Text goes here.
+                </p>
             </article>
             <article>
                 <div class="polaroid">
                     <img src="img/fkr0389.jpg">
-                    <div>Felix Krause</div>
+                    <div>Smile, please!</div>
                 </div>
-            </article>
-            <article>
-                <h1>... understanding /me</h1>
-                <h2>Pros</h2>
-                <ul>
-                    <li>Empathy: Understand the "Needs" behind "Wants"</li>
-                    <li>Intelligence: Looks behind the mirror</li>
-                    <li>Optimism: Always thinks the best of You</li>
-                    <li>Hyper Focus: If it bugs me, i will solve it</li>
-                </ul>
-                <h2>Cons</h2>
-                <ul>
-                    <li>Duty Work: Don't let me do shit, plz</li>
-                    <li>Paper Work: Almost the same as above</li>
-                </ul>
             </article>
             <article>
                 <h1>... this guy is for hire!</h1>
@@ -69,6 +52,21 @@
                     <li>Environment Activist</li>
                     <li>ADHD Coach</li>
                     <li>Dremel Power Tool Enthusiast</li>
+                </ul>
+            </article>
+            <article>
+                <h1>... understanding /me</h1>
+                <h2>Pros</h2>
+                <ul>
+                    <li>Empathy: Understand the "Needs" behind "Wants"</li>
+                    <li>Intelligence: Looks behind the mirror</li>
+                    <li>Optimism: Always thinks the best of You</li>
+                    <li>Hyper Focus: If it bugs me, i will solve it</li>
+                </ul>
+                <h2>Cons</h2>
+                <ul>
+                    <li>Duty Work: Don't let me do it</li>
+                    <li>Paper Work: Has to be done but...</li>
                 </ul>
             </article>
         </section>
@@ -113,6 +111,26 @@
                 dotsPosition: 'right',
                 animateTime: 0.7,
                 animateFunction: 'ease-in'
+            });
+            let section0 = new Fk.sideScroll({
+                ViewWidth: (window.innerWidth > 980) ? 40 : 90,
+                Container: document.querySelector("#section0"),
+                Items: document.querySelectorAll("#section0>article")
+            });
+            let section1 = new Fk.sideScroll({
+                ViewWidth: (window.innerWidth > 980) ? 40 : 90,
+                Container: document.querySelector("#section1"),
+                Items: document.querySelectorAll("#section1>article")
+            });
+            let section2 = new Fk.sideScroll({
+                ViewWidth: (window.innerWidth > 980) ? 40 : 90,
+                Container: document.querySelector("#section2"),
+                Items: document.querySelectorAll("#section2>article")
+            });
+            let section3 = new Fk.sideScroll({
+                ViewWidth: (window.innerWidth > 980) ? 40 : 90,
+                Container: document.querySelector("#section3"),
+                Items: document.querySelectorAll("#section3>article")
             });
         </script>
     </main>

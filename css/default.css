@@ -7,6 +7,7 @@
             */
 
 body {
+    user-select: none;
     color: #363020;
     font-family: sans-serif;
     font-size: 2vh;
@@ -27,7 +28,6 @@ header {
     margin-bottom: 2em;
     font-family: monospace;
     z-index: 100;
-    user-select: none;
     font-size: 1.34vh
 }
 
@@ -57,6 +57,7 @@ main {
 }
 
 main>section {
+    padding-top: .25vw;
     border-top: 1px solid #363020BB;
     position: relative;
     padding-left: 5vw;
@@ -124,7 +125,9 @@ main ol {
 
 article {
     overflow: hidden;
-    height: 88vh;
+    height: 75vh;
+    background: inherit;
+    box-shadow: 0.2em 0.2em 0.5em #363020;
 }
 
 article .back-button {
@@ -137,7 +140,7 @@ article .back-button {
     font-size: 6vh;
     font-weight: bold;
     text-shadow: 0 0 .5vh #FFFFFF;
-    bottom: 15vh;
+    bottom: 0;
     width: 50%;
     text-align: end;
     color: #363020DD;
@@ -153,7 +156,7 @@ article .next-button {
     font-size: 6vh;
     font-weight: bold;
     text-shadow: 0 0 .5vh #FFFFFF;
-    bottom: 15vh;
+    bottom: 0;
     width: 50%;
     text-align: start;
     color: #363020DD;
