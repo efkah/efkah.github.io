@@ -10,7 +10,7 @@ Fk.sideScroll = function (settings) {
 
     this.selectItemById = function (itemId) {
         !log || console.info(`${ns}.selectItemById(itemId)`, itemId);
-        self.SelectedItem = itemId;
+        self.SelectedItemId = itemId;
         i = 0;
         self.Settings.Items.forEach(item => {
             if (i < itemId) {
@@ -38,12 +38,12 @@ Fk.sideScroll = function (settings) {
 
     this.selectNextItem = function () {
         !log || console.info(`${ns}.selectNextItem()`);
-        let itemId = self.SelectedItem + 1;
+        let itemId = self.SelectedItemId + 1;
         return self.selectItemById(itemId);
     }
     this.selectPreviousItem = function () {
         !log || console.info(`${ns}.selectPreviousItem(e)`);
-        let itemId = self.SelectedItem - 1;
+        let itemId = self.SelectedItemId - 1;
         return self.selectItemById(itemId);
     }
 
@@ -52,7 +52,7 @@ Fk.sideScroll = function (settings) {
         e = e || window.event;
         e.preventDefault();
 
-        dragHelper.itemId = self.SelectedItem;
+        dragHelper.itemId = self.SelectedItemId;
 
         if (e.type == 'touchstart') {
             dragHelper.x = e.touches[0].clientX;
@@ -98,17 +98,20 @@ Fk.sideScroll = function (settings) {
         !log || console.info(`${ns}.dragEndEventHandler(e)`, e);
         e.preventDefault();
 
-        if (self.SelectedItem < 0) {
+        if (self.SelectedItemId < 0) {
             self.selectItemById(0);
             dragHelper.isDragging = false;
-        } else if (self.SelectedItem > (self.Settings.Items.length - 1)) {
+        } else 
+        if (self.SelectedItemId > (self.Settings.Items.length - 1)) {
             self.selectItemById((self.Settings.Items.length - 1));
             dragHelper.isDragging = false;
         }
         
-            self.selectItemById(Math.round(self.SelectedItem));
-
-        e.stopPropagation();
+        var selectItemId = Math.round(self.SelectedItemId)
+        if (dragHelper.itemId != selectItemId) {
+            self.selectItemById(selectItemId);
+            e.stopPropagation();
+        }
         document.onmouseup = null;
         document.onmousemove = null;
         dragHelper.itemId = null;
@@ -126,7 +129,7 @@ Fk.sideScroll = function (settings) {
     }
     var selectNextItemEventHandler = function (e) {
         !log || console.info(`${ns}.selectNextItemEventHandler(e)`, e);
-        console.log(self.SelectedItem);
+        console.log(self.SelectedItemId);
         e.preventDefault();
         e.stopPropagation();
         
@@ -134,7 +137,7 @@ Fk.sideScroll = function (settings) {
     }
     var selectPreviousItemEventHandler = function (e) {
         !log || console.info(`${ns}.selectPreviousItemEventHandler(e)`, e);
-        console.log(self.SelectedItem);
+        console.log(self.SelectedItemId);
         e.preventDefault();
         e.stopPropagation();
         
@@ -144,7 +147,7 @@ Fk.sideScroll = function (settings) {
     var init = function () {
         !log || console.info(`${ns}.init()`);
         let itemId = 0;
-        self.SelectedItem = 0;
+        self.SelectedItemId = 0;
 
         self.Settings.Items.forEach(item => {
             item.dataset.index = itemId;

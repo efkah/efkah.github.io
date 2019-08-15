@@ -125,8 +125,8 @@ main ol {
 article {
     overflow: hidden;
     height: 75vh;
-    background: inherit;
-    box-shadow: 0.2em 0.2em 0.5em #363020;
+    /* background: inherit; */
+    /* box-shadow: 0.2em 0.2em 0.5em #363020; */
 }
 
 article .back-button {

@@ -200,8 +200,8 @@
 			document.removeEventListener('mousewheel', this.mouseWheelAndKey, false);
 			document.removeEventListener('wheel', this.mouseWheelAndKey, false);
 			document.removeEventListener('keyup', this.mouseWheelAndKey, false);
-			document.removeEventListener('touchstart', this.touchStart, false);
-			document.removeEventListener('touchend', this.touchEnd, false);
+			document.removeEventListener('touchstart', this.touchStart, true);
+			document.removeEventListener('touchend', this.touchEnd, true);
 
 			} else {
 				document.detachEvent('onmousewheel', this.mouseWheelAndKey, false);
