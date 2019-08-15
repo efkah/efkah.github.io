@@ -15,7 +15,7 @@ body {
     background: linear-gradient(120deg, #0FC3C6, #C64191 38.2%, #F0F3BD 61.8%, #0FC3C6 100%);
 }
 
-header {
+body>header {
     /* background-color: #0FC3C6;
                 background: linear-gradient(140deg, #0FC3C6 10%, #C64191 61.8%, #F0F3BD 90%); */
     padding: 1vh 1vw;
@@ -99,7 +99,7 @@ main>#section3 h1 {
     background: linear-gradient(120deg, #0FC3C6, #C64191 38.2%, #F0F3BD 61.8%, #0FC3C6 100%);
 }
 
-main h1 {
+main>section>.card  h1 {
     margin-top: -1vh;
     font-family: monospace;
     padding-top: 2vh;
@@ -114,7 +114,7 @@ main h1 {
     transform-origin: top center;
 }
 
-main article {
+main>section>.card  {
     padding: 2vh 2vw;
 }
 
@@ -122,14 +122,14 @@ main ol {
     margin-left: 2vw;
 }
 
-article {
+main>section>.card  {
     overflow: hidden;
     height: 75vh;
     /* background: inherit; */
     /* box-shadow: 0.2em 0.2em 0.5em #363020; */
 }
 
-article .back-button {
+main>section>.card  .back-button {
     z-index: 10000;
     position: absolute;
     right: 45%;
@@ -145,7 +145,7 @@ article .back-button {
     color: #363020DD;
 }
 
-article .next-button {
+main>section>.card  .next-button {
     z-index: 10000;
     position: absolute;
     left: 45%;
@@ -166,32 +166,53 @@ article .next-button {
 }
 
 .polaroid {    
-    padding: 1em;
-    max-width: 70%;
-    max-height: 68.2%;
-    background-color: white;
-    transform: rotate(-2deg) scale(1.2);
-    transform-origin: 0 0;
+    background-color: #ecf8f8;
     box-shadow: 0.1em 0.1em 0.4em #363020;
-    margin-top: 2vh;
+    position: relative;
     height: inherit;
     width: inherit;
-    margin-left: .25em;
 }
 
-.polaroid>img {    
-    object-fit: cover;
-    width: 100%;
+.polaroid>img {
+    width: 90%;
+    padding: 5%;
     height: 90%;
-    object-position: top center;
 }
-
-.polaroid>div {
-    margin-top: 3%;
-    font-size: 160%;
-    width: inherit;
+.polaroid>div { 
+    margin: 5%;
+    bottom: 15%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-image: url(../img/fkr0389.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.polaroid>.capture {    
+    margin-bottom: 10%;
     text-align: center;
     font-family: monospace;
-    transform: rotate(-2deg);
     font-weight: bold;
+    bottom: 0;
+    top: 85%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 200%;
+}
+
+article.note {
+    margin: auto;
+    margin-bottom: 1em;
+    padding: 1em;
+    background: #ecf8f8;
+    transform: rotate(0deg);
+    transform-origin: top center;
+    box-shadow: 0.1em 0.1em 0.4em #363020;
+}
+
+article.note>header {
+    font-size: larger;
 }

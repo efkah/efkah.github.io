@@ -23,30 +23,38 @@
     </header>
     <main id="main" class="scroll-container ">
         <section id="section0">
-            <article>
-                <h1>... welcome, stranger!</h1>
-                <h2>This is Felix Krause</h2>
+                <article class="card">
+                    <article class="polaroid">
+                        <div></div>
+                        <footer class="capture">Smile, please!</footer>
+                    </article>
+                </article>
+            <article class="card">
+                    <h1>... welcome, stranger!</h1>
+                    <article class="note">
+                <header>This is Felix Krause</header>
                 <p>
-                    Text goes here.
+                    Text goes here.</p><p>
+                    So much be told: 
+                    I am awesome!
                 </p>
             </article>
-            <article>
-                <div class="polaroid">
-                    <img src="img/fkr0389.jpg">
-                    <div>Smile, please!</div>
-                </div>
             </article>
-            <article>
+            <article class="card">
+                <header>test</header>
                 <h1>... this guy is for hire!</h1>
-                <h2>Skillset</h2>
-                <ul>
-                    <li>Full Stack HTML Deveoper / Consultant</li>
-                    <li>Full Stack SharePoint On Prem Developer / Consultant</li>
-                    <li>O365 Developer / Consultant</li>
-                    <li>Swift Developer</li>
-                    <li>Python Developer</li>
-                </ul>
-                <h2>Education & Hobbies</h2>
+                <article class="note">
+                    <header>Skillset</header>
+                    <ul>
+                        <li>Full Stack HTML Deveoper / Consultant</li>
+                        <li>Full Stack SharePoint On Prem Developer / Consultant</li>
+                        <li>O365 Developer / Consultant</li>
+                        <li>Swift Developer</li>
+                        <li>Python Developer</li>
+                    </ul>
+                </article>
+                <article class="note">
+                <header>Education & Hobbies</header>
                 <ul>
                     <li>Mathematician</li>
                     <li>Environment Activist</li>
@@ -54,25 +62,31 @@
                     <li>Dremel Power Tool Enthusiast</li>
                 </ul>
             </article>
-            <article>
+            </article>
+            <article class="card">
                 <h1>... understanding /me</h1>
-                <h2>Pros</h2>
+                <article class="note">
+                <header>Pros</header>
                 <ul>
                     <li>Empathy: Understand the "Needs" behind "Wants"</li>
                     <li>Intelligence: Looks behind the mirror</li>
                     <li>Optimism: Always thinks the best of You</li>
                     <li>Hyper Focus: If it bugs me, i will solve it</li>
                 </ul>
-                <h2>Cons</h2>
+            </article>
+                <article class="note">
+                <header>Cons</header>
                 <ul>
                     <li>Duty Work: Don't let me do it</li>
                     <li>Paper Work: Has to be done but...</li>
                 </ul>
             </article>
+            </article>
         </section>
         <section id="section1">
-            <article>
+                <article class="card">
                 <h1>... soon to come</h1>
+                <article class="note">
                 <h2>Projects</h2>
                 <ol>
                     <li>
@@ -86,17 +100,23 @@
                     </li>
                 </ol>
             </article>
+            </article>
         </section>
         <section id="section2">
-            <article>
+                <article class="card">
                 <h1>... soon to come</h1>
+                <article class="note">
                 <h2><a href="/kb">MarkDown here</a></h2>
                 </ol>
             </article>
+            </article>
         </section>
         <section id="section3">
-            <article>
+                <article class="card">
                 <h1>... disclaimer, legal info</h1>
+                <article class="note">
+                    no content yet
+                    </article>
             </article>
         </section>
 
@@ -108,23 +128,23 @@
             let section0 = new Fk.sideScroll({
                 ViewWidth: (window.innerWidth > 980) ? 40 : 90,
                 Container: document.querySelector("#section0"),
-                Items: document.querySelectorAll("#section0>article"),
+                Items: document.querySelectorAll("#section0>.card"),
                 log: false
             }).selectItemById(1);
             let section1 = new Fk.sideScroll({
                 ViewWidth: (window.innerWidth > 980) ? 40 : 90,
                 Container: document.querySelector("#section1"),
-                Items: document.querySelectorAll("#section1>article")
+                Items: document.querySelectorAll("#section1>.card")
             });
             let section2 = new Fk.sideScroll({
                 ViewWidth: (window.innerWidth > 980) ? 40 : 90,
                 Container: document.querySelector("#section2"),
-                Items: document.querySelectorAll("#section2>article")
+                Items: document.querySelectorAll("#section2>.card")
             });
             let section3 = new Fk.sideScroll({
                 ViewWidth: (window.innerWidth > 980) ? 40 : 90,
                 Container: document.querySelector("#section3"),
-                Items: document.querySelectorAll("#section3>article")
+                Items: document.querySelectorAll("#section3>.card")
             });
             Fk.PageScroll = new fullPageScroll({
                 mainElement: document.getElementById("main"),
