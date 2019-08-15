@@ -1,15 +1,16 @@
 var Fk = Fk || {};
 Fk.sideScroll = function (settings) {
-    let self = this, fk = true, ns = "Fk.sideScroll";
+    let self = this, log = settings.log, ns = "Fk.sideScroll";
 
     this.Settings = settings || {
         ViewWidth: (window.innerWidth > 980) ? 40 : 90,
         Container: document.querySelector("#section0"),
-        Items: document.querySelectorAll("#section0>article")
+        Items: document.querySelectorAll("#section0>article"),
     }
 
     this.selectItemById = function (itemId) {
-        self.selectedItem = itemId;
+        !log || console.info(`${ns}.selectItemById(itemId)`, itemId);
+        self.SelectedItem = itemId;
         i = 0;
         self.Settings.Items.forEach(item => {
             if (i < itemId) {
@@ -32,25 +33,18 @@ Fk.sideScroll = function (settings) {
             }
             i++;
         });
-        
-        
-
-        fk || console.info(`${ns}.selectItemById(itemId)`, itemId);
+        return self;
     }
 
-    this.selectNextItem = function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        let itemId = self.selectedItem + 1;
-        self.selectItemById(itemId);
-        fk || console.info(`${ns}.selectNextItem(e)`, e);
+    this.selectNextItem = function () {
+        !log || console.info(`${ns}.selectNextItem()`);
+        let itemId = self.SelectedItem + 1;
+        return self.selectItemById(itemId);
     }
-    this.selectPreviousItem = function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        let itemId = self.selectedItem - 1;
-        self.selectItemById(itemId);
-        fk || console.info(`${ns}.selectPreviousItem(e)`, e);
+    this.selectPreviousItem = function () {
+        !log || console.info(`${ns}.selectPreviousItem(e)`);
+        let itemId = self.SelectedItem - 1;
+        return self.selectItemById(itemId);
     }
 
     var dragHelper  = {x: 0, y: 0, itemId: null, isDragging: false }
@@ -58,7 +52,7 @@ Fk.sideScroll = function (settings) {
         e = e || window.event;
         e.preventDefault();
 
-        dragHelper.itemId = self.selectedItem;
+        dragHelper.itemId = self.SelectedItem;
 
         if (e.type == 'touchstart') {
             dragHelper.x = e.touches[0].clientX;
@@ -69,10 +63,11 @@ Fk.sideScroll = function (settings) {
             document.onmouseup = dragEndEventHandler;
             document.onmousemove = dragActionEventHandler;
         }
-        fk || console.info(`${ns}.dragStartEventHandler(e)`, e);
+        !log || console.info(`${ns}.dragStartEventHandler(e)`, e);
     }
 
     var dragActionEventHandler = function (e) {
+        !log || console.info(`${ns}.dragActionEventHandler(e)`, e);
         e = e || window.event;
         e.preventDefault();
         dragHelper.isDragging = true;
@@ -93,50 +88,34 @@ Fk.sideScroll = function (settings) {
             dirY = (e.clientY - dragHelper.y) / (window.innerHeight - dragHelper.y);
         }
         if (-1 > dirY < 1) {
-            self.selectItemById(dragHelper.itemId - dirX);
+            if (dirX < -.1 || dirX > .1) {
+                self.selectItemById(dragHelper.itemId - dirX);
+            }
         }
-        fk || console.info(`${ns}.dragActionEventHandler(e)`, e);
     }
 
     var dragEndEventHandler = function (e) {
+        !log || console.info(`${ns}.dragEndEventHandler(e)`, e);
         e.preventDefault();
 
-        //     console.info(dragHelper.itemId , dragHelper.sectionId);
-        //     let dirX = (e.clientX - dragHelper.x) / (window.innerWidth / 10) || 0;
-        //     let dirY = (e.clientY - dragHelper.y) / (window.innerHeight / 10) || 0;
-        //     console.log(dirX, dirY)
-        //     if (-1 > dirY < 1) {
-        //         if (dirX < -1) {
-        //             console.log("self.selectPreviousItem()");
-        //             self.selectPreviousItem();
-        //         } else if (dirX > 1) {
-        //             console.log("self.selectNextItem()");
-        //             self.selectNextItem();
-        //         }        
-        //     }
-
-        // var bounds = (0 <= itemId) && (itemId <= (self.Settings.Items.length - 1));
-        // console.log(0, itemId, (self.Settings.Items.length - 1), bounds);
-
-        console.log(self.selectedItem);
-        if (self.selectedItem < 0) {
+        if (self.SelectedItem < 0) {
             self.selectItemById(0);
             dragHelper.isDragging = false;
-        } else if (self.selectedItem > (self.Settings.Items.length - 1)) {
+        } else if (self.SelectedItem > (self.Settings.Items.length - 1)) {
             self.selectItemById((self.Settings.Items.length - 1));
             dragHelper.isDragging = false;
         }
         
-            self.selectItemById(Math.round(self.selectedItem));
+            self.selectItemById(Math.round(self.SelectedItem));
 
         e.stopPropagation();
         document.onmouseup = null;
         document.onmousemove = null;
         dragHelper.itemId = null;
-        fk || console.info(`${ns}.dragEndEventHandler(e)`, e);
     }
 
     var clickVisibleItemEventHandler = function (e) {
+        !log || console.info(`${ns}.clickVisibleItemEventHandler(e)`, e);
         e.preventDefault();
         let itemId = parseInt(e.target.closest("article").dataset.index);
         if (dragHelper.isDragging) {
@@ -144,16 +123,32 @@ Fk.sideScroll = function (settings) {
         } else {
             self.selectItemById(itemId);
         }
-        fk || console.info(`${ns}.clickVisibleItemEventHandler(e)`, e);
+    }
+    var selectNextItemEventHandler = function (e) {
+        !log || console.info(`${ns}.selectNextItemEventHandler(e)`, e);
+        console.log(self.SelectedItem);
+        e.preventDefault();
+        e.stopPropagation();
+        
+        self.selectNextItem();
+    }
+    var selectPreviousItemEventHandler = function (e) {
+        !log || console.info(`${ns}.selectPreviousItemEventHandler(e)`, e);
+        console.log(self.SelectedItem);
+        e.preventDefault();
+        e.stopPropagation();
+        
+        self.selectPreviousItem();
     }
 
     var init = function () {
+        !log || console.info(`${ns}.init()`);
         let itemId = 0;
-        self.selectedItem = 0;
+        self.SelectedItem = 0;
 
         self.Settings.Items.forEach(item => {
             item.dataset.index = itemId;
-            item.style.transformOrigin = `${((itemId - 1) * -self.Settings.ViewWidth)}vw ${itemId * 5}vw`;
+            item.style.transformOrigin = `${(((itemId - 1) * - self.Settings.ViewWidth) - self.Settings.ViewWidth / 2)}vw ${itemId * 5}vw`;
 
             item.addEventListener("click", clickVisibleItemEventHandler, {capture: true});
             if (itemId > 0) {
@@ -161,7 +156,8 @@ Fk.sideScroll = function (settings) {
                 backButton.innerText = "<";
                 backButton.classList.add("back-button");
                 backButton.classList.add("sidescroll-nav");
-                backButton.addEventListener("click", self.selectPreviousItem, {capture: true});
+                backButton.addEventListener("click", selectPreviousItemEventHandler, {capture: true});
+                backButton.addEventListener("touchstart", selectPreviousItemEventHandler, {capture: true});
                 item.appendChild(backButton);
             }
             if (itemId < self.Settings.Items.length - 1) {
@@ -169,7 +165,8 @@ Fk.sideScroll = function (settings) {
                 nextButton.innerText = ">";
                 nextButton.classList.add("next-button");
                 nextButton.classList.add("sidescroll-nav");
-                nextButton.addEventListener("click", self.selectNextItem, {capture: true});
+                nextButton.addEventListener("click", selectNextItemEventHandler, {capture: true});
+                nextButton.addEventListener("touchstart", selectNextItemEventHandler, {capture: true});
                 item.appendChild(nextButton);
             }
             itemId++
@@ -185,17 +182,16 @@ Fk.sideScroll = function (settings) {
         self.Settings.Container.style.gridTemplateColumns = gridTemplateColumns;
         // Mouse events
         // self.Settings.Container.onmousedown = dragStartEventHandler;
-        self.Settings.Container.addEventListener('mousedown', dragStartEventHandler, {capture: false});
+        self.Settings.Container.addEventListener('mousedown', dragStartEventHandler, {capture: true});
 
         // Touch events
-        self.Settings.Container.addEventListener('touchstart', dragStartEventHandler, {capture: false});
-        self.Settings.Container.addEventListener('touchend', dragEndEventHandler, {capture: false});
-        self.Settings.Container.addEventListener('touchmove', dragActionEventHandler, {capture: false});
+        self.Settings.Container.addEventListener('touchstart', dragStartEventHandler, {capture: true});
+        self.Settings.Container.addEventListener('touchend', dragEndEventHandler, {capture: true});
+        self.Settings.Container.addEventListener('touchmove', dragActionEventHandler, {capture: true});
 
-        self.selectItemById(0, 0);
-        fk || console.info(`${ns}.init()`);
+        self.selectItemById(0);
     }
 
     init();
-    fk || console.info(`${ns}(settings)`, settings);
+    !log || console.info(`${ns}(settings)`, settings);
 }

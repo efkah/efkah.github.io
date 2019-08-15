@@ -105,18 +105,12 @@
         <script src="js/full-page-scroll.js"></script>
         <script type="text/javascript">
             var Fk = Fk || {};
-            Fk.PageScroll = new fullPageScroll({
-                mainElement: document.getElementById("main"),
-                displayDots: true,
-                dotsPosition: 'right',
-                animateTime: 0.7,
-                animateFunction: 'ease-in'
-            });
             let section0 = new Fk.sideScroll({
                 ViewWidth: (window.innerWidth > 980) ? 40 : 90,
                 Container: document.querySelector("#section0"),
-                Items: document.querySelectorAll("#section0>article")
-            });
+                Items: document.querySelectorAll("#section0>article"),
+                log: true
+            }).selectItemById(1);
             let section1 = new Fk.sideScroll({
                 ViewWidth: (window.innerWidth > 980) ? 40 : 90,
                 Container: document.querySelector("#section1"),
@@ -131,6 +125,13 @@
                 ViewWidth: (window.innerWidth > 980) ? 40 : 90,
                 Container: document.querySelector("#section3"),
                 Items: document.querySelectorAll("#section3>article")
+            });
+            Fk.PageScroll = new fullPageScroll({
+                mainElement: document.getElementById("main"),
+                displayDots: true,
+                dotsPosition: 'right',
+                animateTime: 0.7,
+                animateFunction: 'ease-in'
             });
         </script>
     </main>

@@ -113,7 +113,6 @@ main h1 {
     border: .1em solid #363020;
     transform-origin: top center;
 }
-}
 
 main article {
     padding: 2vh 2vw;
@@ -169,7 +168,7 @@ article .next-button {
 .polaroid {    
     padding: 1em;
     max-width: 70%;
-    max-height: 75%;
+    max-height: 68.2%;
     background-color: white;
     transform: rotate(-2deg) scale(1.2);
     transform-origin: 0 0;
