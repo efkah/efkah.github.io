@@ -14,6 +14,10 @@ body {
     background-color: #ecf8f8;
     background: linear-gradient(120deg, #0FC3C6, #C64191 38.2%, #F0F3BD 61.8%, #0FC3C6 100%);
 }
+a {
+    user-select: initial;
+    z-index: 10000;
+}
 
 body>header {
     /* background-color: #0FC3C6;
@@ -215,4 +219,10 @@ article.note {
 
 article.note>header {
     font-size: larger;
+}
+
+aside {
+    width: 30%;
+    background: red;
+    float: right;
 }

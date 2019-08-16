@@ -119,12 +119,14 @@ Fk.sideScroll = function (settings) {
 
     var clickVisibleItemEventHandler = function (e) {
         !log || console.info(`${ns}.clickVisibleItemEventHandler(e)`, e);
-        e.preventDefault();
-        let itemId = parseInt(e.target.closest("article").dataset.index);
-        if (dragHelper.isDragging) {
-            dragHelper.isDragging = false;
-        } else {
-            self.selectItemById(itemId);
+        let itemId = parseInt(e.target.closest(".card").dataset.index);
+        if (itemId != self.SelectedItemId) {
+            e.preventDefault();
+            if (dragHelper.isDragging) {
+                dragHelper.isDragging = false;
+            } else {
+                self.selectItemById(itemId);
+            }
         }
     }
     var selectNextItemEventHandler = function (e) {
@@ -153,7 +155,7 @@ Fk.sideScroll = function (settings) {
             item.dataset.index = itemId;
             item.style.transformOrigin = `${(((itemId - 1) * - self.Settings.ViewWidth) - self.Settings.ViewWidth / 2)}vw ${itemId * 5}vw`;
 
-            item.addEventListener("click", clickVisibleItemEventHandler, {capture: true});
+            item.addEventListener("click", clickVisibleItemEventHandler, {capture: false});
             if (itemId > 0) {
                 let backButton = document.createElement("div");
                 backButton.innerText = "<";
