@@ -107,7 +107,7 @@ main>section>.card  h1 {
     margin-top: -1vh;
     font-family: monospace;
     padding-top: 2vh;
-    transform: rotate(-2deg) translateY(4vh);
+    transform: rotate(-2deg) translateY(2vh);
     margin-left: -5vw;
     padding-left: 5vw;
     margin-right: -5vw;
@@ -115,7 +115,7 @@ main>section>.card  h1 {
     margin-bottom: 10vh;
     padding-bottom: 2vh;
     border: .1em solid #363020;
-    transform-origin: top center;
+    transform-origin: 0 0;
 }
 
 main>section>.card  {

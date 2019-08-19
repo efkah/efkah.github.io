@@ -50,7 +50,7 @@ Fk.sideScroll = function (settings) {
     var dragHelper  = {x: 0, y: 0, itemId: null, isDragging: false }
     var dragStartEventHandler = function (e) {
         e = e || window.event;
-        e.preventDefault();
+        // e.preventDefault();
 
         dragHelper.itemId = self.SelectedItemId;
 
@@ -96,7 +96,7 @@ Fk.sideScroll = function (settings) {
 
     var dragEndEventHandler = function (e) {
         !log || console.info(`${ns}.dragEndEventHandler(e)`, e);
-        e.preventDefault();
+        // e.preventDefault();
 
         if (self.SelectedItemId < 0) {
             self.selectItemById(0);
