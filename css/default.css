@@ -226,3 +226,25 @@ aside {
     background: red;
     float: right;
 }
+
+ul.social {
+    list-style: none;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(auto-fill, 19%);
+    grid-column-gap: 1%;
+    /* grid-template-rows: 20%; */
+}
+
+ul.social>li {
+    width: 100%;  
+    height: 0;
+    padding-bottom: 100%;
+}
+ul.social>li>a {
+    width: inherit;
+}
+ul.social>li>a>img {
+    width: inherit;
+    object-fit: contain;
+}
