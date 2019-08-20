@@ -221,6 +221,15 @@ article.note>header {
     font-size: larger;
 }
 
+article.note>footer {
+    height: 30vh;
+}
+article.note>footer>img {
+    height: inherit;
+    object-fit: contain;
+    float: right;
+}
+
 aside {
     width: 30%;
     background: red;
