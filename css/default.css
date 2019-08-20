@@ -115,7 +115,8 @@ main>section>.card  h1 {
     margin-bottom: 10vh;
     padding-bottom: 2vh;
     border: .1em solid #363020;
-    transform-origin: 0 0;
+    transform-origin: 0 0;    
+    margin-bottom: 5vh;
 }
 
 main>section>.card  {
