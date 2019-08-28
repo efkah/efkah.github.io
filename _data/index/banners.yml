@@ -2,8 +2,14 @@
 # Add items for each banner image in the carousel
 #
 # Images are expected to be located in `static/assets/img/`.
-- src: landing/header_one.jpg
-  title: first banner image
+- src: landing/Hintergrund1.png
+  title: Motivational Picture
 
-- src: landing/header_two.jpg
-  title: second banner image
+- src: landing/Hintergrund2.png
+  title: Zen Stones
+  
+- src: landing/Hintergrund3.png
+  title: Digital Transformation
+  
+- src: landing/Hintergrund4.png
+  title: Kiko in Europe
