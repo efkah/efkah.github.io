@@ -1,0 +1,1 @@
+docker run --rm -d -it --volume=${PWD}:/srv/jekyll -it jekyll/builder jekyll build
