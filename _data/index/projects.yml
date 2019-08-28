@@ -14,7 +14,7 @@
   i18n: efkah
   gh_user: efkah
   repo: shapestacker-core
-  img: /static/assets/img/landing/projects_shapestacker.png
+  img: /static/assets/img/landing/projects-shapestacker.png
   desc: Currently on bitbucket, will move it soon.
   
 - name: efkah
@@ -27,5 +27,5 @@
 - name: iOS AppStore Development
   i18n: appstore
   url: https://apps.apple.com/ch/developer/felix-krause/id1468732432
-  img: /static/assets/img/landing/projects_appstore.png
+  img: /static/assets/img/landing/projects-appstore.png
   desc: Check out all my apps on the App Store!
