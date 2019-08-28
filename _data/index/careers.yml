@@ -12,7 +12,7 @@
   job:
     detail: SharePoint Solution Specialist
     i18n: career_6_job
-  icon: far fa-calendar-check
+  icon: fa-rocket
   present: true
   
 - name:
@@ -27,7 +27,7 @@
   job:
     detail: Software & Technology Lead
     i18n: career_5_job
-  icon: far fa-calendar-plus
+  icon: fa-calendar
   
 - name:
     detail: Freelance Development
@@ -41,7 +41,7 @@
   job:
     detail: Freelancer
     i18n: career_4_job
-  icon: far fa-calendar-plus
+  icon: fa-calendar
   
 - name:
     detail: BlueBridge Technologies
@@ -55,7 +55,7 @@
   job:
     detail: Lead Developer
     i18n: career_3_job
-  icon: far fa-calendar-plus
+  icon: fa-calendar
   
 - name:
     detail: new solutions - business software
@@ -69,7 +69,7 @@
   job:
     detail: Developer
     i18n: career_2_job
-  icon: far fa-calendar-plus
+  icon: fa-calendar
   
 - name:
     detail: OTH Regensburg
