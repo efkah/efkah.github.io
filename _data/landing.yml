@@ -24,7 +24,7 @@
   tpl: projects.html
   css: project
 
-- id: blog
+- id: Knowledge Base
   i18n: nav.blog
   name: Blog
   tpl: blog.html
