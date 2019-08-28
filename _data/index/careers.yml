@@ -1,7 +1,7 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: GARAIO AG
+    detail: GARAIO - Refreshing Software
     i18n: career_6
   desc:
     detail: Going back to GARAIO AG i could again boost my SharePoint, Office 365 and Frontend skills. While adopting to the swiss life style i am sharpening my profile and learning cutting edge technologies.
@@ -16,7 +16,7 @@
   present: true
   
 - name:
-    detail: H-O-T
+    detail: H-O-T - Let's optimize excellence
     i18n: career_5
   desc:
     detail: With H-O-T, a medium-sized enterprise in the german automobile industry, i was able to implement industry standards for supply chains and automation in the "Industrie 4.0"
@@ -30,24 +30,24 @@
   icon: far fa-calendar-plus
   
 - name:
-    detail: GARAIO AG
+    detail: Freelance Development
     i18n: career_4
   desc:
-    detail: During my time as freelance developer i offered management consultancy for corporate and web-design, until i revisited SharePoint at the GARAIO AG in Switzerland.
+    detail: During my time as self-employed developer i offered management consultancy for corporate and web-design, until i revisited SharePoint at the GARAIO AG in Switzerland.
     i18n: career_4_desc
   date:
     detail: early 2014
     i18n: career_4_date
   job:
-    detail: Freelance Developer
+    detail: Freelancer
     i18n: career_4_job
   icon: far fa-calendar-plus
   
 - name:
-    detail: BlueBridge Consulting
+    detail: BlueBridge Technologies
     i18n: career_3
   desc:
-    detail: BlueBridge Consulting offered me the possibilty to deep dive into Microsoft SharePoint by consulting major companies, joining and later leading small developer teams.
+    detail: BlueBridge Consulting offered me the possibilty to deep dive into Microsoft SharePoint by consulting major companies, as well as joining and later leading small developer teams.
     i18n: career_3_desc
   date:
     detail: early 2012
@@ -58,10 +58,10 @@
   icon: far fa-calendar-plus
   
 - name:
-    detail: New Solutions
+    detail: new solutions - business software
     i18n: career_2
   desc:
-    detail: After graduation, i started off my career in information technology as i was eager to learn programming and get to know the scene. I quickly learned the basics while giving .NET and Microsoft training.
+    detail: After graduation, i started off my career in information technology as i was eager to learn programming and get to know the scene. I quickly learned the basics while giving C# and ASP.NET trainings.
     i18n: career_2_desc
   date:
     detail: early 2011
