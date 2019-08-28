@@ -2656,7 +2656,12 @@ body {
     padding-top: 80px;
     padding-bottom: 90px;
     background-color: #3385FF;
-    background-image: url(../assets/img/landing/avatar_all.png);
+    background-image: url(../assets/img/landing/knowledge-base.svg);
+    background-origin: content-box;
+    background-clip: border-box;
+    background-position: center center;
+    background-repeat: repeat;
+    background-size: 100px;
   }
   .contact {
     background-image: url(../assets/img/landing/word_map.png);
