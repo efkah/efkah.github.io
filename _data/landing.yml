@@ -33,6 +33,6 @@
 
 - id: links
   i18n: nav.link
-  name: Life, the Universe and Everything
+  name: Links
   tpl: links.html
   css: contact
