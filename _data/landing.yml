@@ -24,15 +24,15 @@
   tpl: projects.html
   css: project
 
-- id: Knowledge Base
+- id: blog
   i18n: nav.blog
-  name: Blog
+  name: Knowledge Base
   tpl: blog.html
   page: blog/
   css: testimonials navy-section
 
 - id: links
   i18n: nav.link
-  name: Links
+  name: Life, the Universe and Everything
   tpl: links.html
   css: contact
