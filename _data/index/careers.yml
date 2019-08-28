@@ -12,7 +12,7 @@
   job:
     detail: CTO
     i18n: company_a_job
-  icon: fa-plus-square
+  icon: fa-certificate
   present: true
 
 - name:
@@ -27,4 +27,4 @@
   job:
     detail: Full Stack Developer
     i18n: company_b_job
-  icon: fa-plus-square
+  icon: far fa-certificate
