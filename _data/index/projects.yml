@@ -3,21 +3,21 @@
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 
 
-- name: efkah
+- name: efkah/sticker-tool
   i18n: efkah
   gh_user: efkah
   repo: sticker-tool
   img: /static/assets/img/landing/projects-sticker-tool.png
   desc: Currently on bitbucket, will move it soon.
     
-- name: efkah
+- name: efkah/shapestacker-core
   i18n: efkah
   gh_user: efkah
   repo: shapestacker-core
   img: /static/assets/img/landing/projects-shapestacker.png
   desc: Currently on bitbucket, will move it soon.
   
-- name: efkah
+- name: efkah/emoji-font-example
   i18n: efkah
   gh_user: efkah
   repo: emoji-font-example
