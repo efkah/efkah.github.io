@@ -16,7 +16,7 @@ author:  # change following line to your infomation.
   last_name: Krause  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   github_username: efkah  # Leave blank if you don't have now
-  linkedin_id:  # Leave blank if you don't have now
+  linkedin_id: Felix_Krause19 # Leave blank if you don't have now
   facebook_username:   # Leave blank if you don't have now
   twitter_username:   # Leave blank if you don't have now
   email: felix.s.krause@googlemail.com  # Leave blank if you don't have now
@@ -24,20 +24,20 @@ author:  # change following line to your infomation.
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-css3
-    - name: icon-apple
+    - name: fa-apple
   skill_icon2:
-    - name: icon-windows
+    - name: fa-windows
     - name: icon-html5
   desc: I am a Full Stack engineer with profound knowledge in Microsoft SharePoint, Web and App development. Automation Ops and writing scripts experience come in handy when adapting bleeding edge framework technologies. When i am not making friends in the local developer scene, i focus on environmental activism, making music and poetry.  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-  name: jalpc
+  # name: jalpc
 
 # analytics
 ## google analytics
 ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
-  id: UA-93473370-3
+  id: UA-146586520-1
 
 ## google optimize
 go:
@@ -51,8 +51,8 @@ gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your 
 donation: off  # type 'on'/'off' to choice display donation button at post page or not
 
 ## carousels
-index_carousel: off  # index page carousel switch
-blog_carousel: off  # blog page carousel switch
+index_carousel: on  # index page carousel switch
+blog_carousel: on  # blog page carousel switch
 
 # scss
 sass:
