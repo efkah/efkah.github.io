@@ -1,22 +1,31 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Jalpc
-  i18n: jalpc
-  gh_user: jarrekk
-  repo: Jalpc
-  img: /static/assets/img/landing/jekyll.png
-  desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
 
-- name: Python
-  i18n: cpython
-  gh_user: python
-  repo: cpython
-  img: /static/assets/img/landing/python.png
-  desc: This project is other's project. I use another request to get repo's information.
 
-- name: Google
-  i18n: google
-  url: https://google.com
-  img: /static/assets/img/landing/google.png
-  desc: This is another project.
+- name: efkah
+  i18n: efkah
+  gh_user: efkah
+  repo: sticker-tool
+  img: /static/assets/img/landing/projects-sticker-tool.png
+  desc: Currently on bitbucket, will move it soon.
+    
+- name: efkah
+  i18n: efkah
+  gh_user: efkah
+  repo: shapestacker-core
+  img: /static/assets/img/landing/projects_shapestacker.png
+  desc: Currently on bitbucket, will move it soon.
+  
+- name: efkah
+  i18n: efkah
+  gh_user: efkah
+  repo: emoji-font-example
+  img: /static/assets/img/landing/projects-emoji-font-example.png
+  desc: While researching the sticker tool i wrote this little tutorial about implementing emoji-fonts.
+  
+- name: iOS AppStore Development
+  i18n: appstore
+  url: https://apps.apple.com/ch/developer/felix-krause/id1468732432
+  img: /static/assets/img/landing/projects_appstore.png
+  desc: Check out all my apps on the App Store!
