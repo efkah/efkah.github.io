@@ -1,18 +1,12 @@
 # links section data
-- last_name: Name 1
-  first_name:
-  desc: CEO
-  website: https://www.google.com
-  email: ceo@google.com
+- last_name: GitHub
+  first_name: Page
+  desc: Privacy Policy
+  website: https://efkah.github.io/static/assets/privacy-policy/privacy-policy.md
+  email: felix.s.krause@googlemail.com
 
-- last_name: Donate
-  first_name: Jalpc
-  desc: Support Jalpc
-  website: http://www.jarrekk.com/donate/
-  email: me@jarrekk.com
-
-- last_name: LN
-  first_name: FN
-  desc: COO
-  website: https://github.com
-  email: coo@google.com
+- last_name: iOS
+  first_name: ShapeStacker
+  desc: Privacy Policy
+  website: https://efkah.github.io/static/assets/privacy-policy/ios-shapestacker/privacy-policy.md
+  email: felix.s.krause@googlemail.com
