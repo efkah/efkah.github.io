@@ -4,8 +4,8 @@ title:  "code snippet test"
 date:   2017-12-21
 desc: "Quick test on writing code snippets in a blog post"
 keywords: "Jalpc,Jekyll,gh-pages,website,blog,easy"
-categories: [HTML]
-tags: [Jalpc,Jekyll]
+categories: [Web]
+tags: [Tag1,Tag2]
 icon: icon-html
 ---
 
