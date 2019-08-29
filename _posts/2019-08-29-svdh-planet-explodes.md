@@ -1,15 +1,15 @@
 ---
 layout: post
 title:  "The Planet Explodes"
-date:   2017-12-21
-desc: ""
-keywords: "Planet,Explodes"
+date:  2019-08-29
+desc: "A Poem about the environmental crisis and love"
+keywords: "Poem, Poetry, Climate, Crisis, Planet, Explodes, Love"
 categories: [Poetry]
-tags: [Tag1,Tag2]
+tags: [Environment,Depression,Love,Happiness]
 icon: fa-paragraph
 ---
 
-# Test 2
+# Test 1
 ```
 Just when i thought, i found a place to stay.
 Just when i thought, i finally found my way.
