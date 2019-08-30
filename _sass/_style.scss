@@ -2513,6 +2513,7 @@ body {
   }
   .carousel {
     height: 26.3157894736842vw;
+    overflow: hidden;
   }
   .carousel-caption {
     z-index: 10;
@@ -2636,13 +2637,20 @@ body {
   .social-icon a {
     background: #3385FF;
     color: #fff;
-    padding: 4px 8px;
+    margin: 4px 4px;
     height: 28px;
     width: 28px;
     display: block;
     border-radius: 50px;
     &:hover {
       background: #3385FF;
+    }
+
+    i {
+      display: block;
+      width: inherit;
+      height:inherit;
+      line-height: 200%;
     }
   }
   .img-small {
@@ -2749,6 +2757,9 @@ body {
 
 @media (max-width: 768px) {
   .landing-page {
+    .carousel {
+      margin-top: 50px;
+    }
     .carousel-caption {
       left: 5%;
       top: 80px;
@@ -2777,9 +2788,10 @@ body {
       }
     }
     .navbar-wrapper .navbar {
+      background-color: white;
       padding-top: 0;
-      padding-bottom: 5px;
-      border-bottom: 1px solid #e7eaec;
+      padding-bottom: 0;
+      border-bottom: 1px solid #e7eaec !important;
       border-radius: 0;
     }
     .nav > li > a {
