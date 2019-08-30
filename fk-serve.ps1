@@ -14,7 +14,7 @@ if ($jekyll_builderInfo)
 }
 
 Write-Host " Starting Container jekyll_builder" -ForeGroundColor Magenta
-$jekyll_builderId = docker run --rm -d -it --name jekyll_builder --volume=${PWD}:/srv/jekyll -it jekyll/builder -p 4000:4000 jekyll serve
+$jekyll_builderId = docker run --rm -d -it --name jekyll_builder --volume=${PWD}:/srv/jekyll -it jekyll/jekyll -p 4000:4000 jekyll serve
 
 Write-Host " Connecting network fk-default to jekyll_builder" -ForeGroundColor Magenta
 $nw = docker network connect fk-default jekyll_builder
@@ -31,7 +31,7 @@ if ($ngrokInfo)
 }
 
 Write-Host " Starting container www_ngrok, linking to jekyll_builder" -ForeGroundColor Magenta 
-$ngrokId = docker run --rm -d --name www_ngrok -p 4040:4040 -it --net fk-default wernight/ngrok ngrok http jekyll_builder:5432
+$ngrokId = docker run --rm -d --name www_ngrok -p 4040:4040 -it --net fk-default wernight/ngrok ngrok http jekyll_builder:4000
 $ip = docker port www_ngrok 4040
 
 Write-Host ""

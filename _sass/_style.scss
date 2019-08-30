@@ -2505,13 +2505,15 @@ body {
     height: auto;
   }
   .header-back {
-    height: 470px;
-    width: 100%;
+    height: 26.3vw;
+    width: 100vw;
     background-position: 50% 0;
-    background-repeat:  no-repeat;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
   }
   .carousel {
-    height: 470px;
+    height: 26.3vw;
   }
   .carousel-caption {
     z-index: 10;
@@ -2763,8 +2765,6 @@ body {
       margin-top: 6px;
     }
     .navbar-default {
-      background-color: #fff;
-      border-color: #fff;
       padding: 15px 0;
       .navbar-nav > .active > a:focus {
         background: 0 0;
