@@ -3,19 +3,19 @@
   href: /blog/
 
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
-- name: web
+- name: Web
   href: /web/
 
-- name: ios
+- name: Ios
   href: /ios/
 
-- name: sharepoint
+- name: Sharepoint
   href: /sharepoint/
 
-- name: poetry
+- name: Poetry
   href: /poetry/
 
-- name: life
+- name: Life
   href: /life/
   
 # Don't display donation page: change donation to off at file '_config.yml'
