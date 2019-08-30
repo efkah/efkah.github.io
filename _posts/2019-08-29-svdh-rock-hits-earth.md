@@ -9,8 +9,6 @@ tags: [english-poetry,siegfried-von-der-halde]
 icon: fa-align-center
 ---
 
-# Rock hits Earth
-
 Just when i thought, i found a place to stay.
 
 Just when i thought, i finally found my way.
