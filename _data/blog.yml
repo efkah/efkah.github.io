@@ -15,8 +15,8 @@
 # - name: Sharepoint
 #   href: /sharepoint/
 
-- name: Poetry
-  href: /poetry/
+# - name: Poetry
+#  href: /poetry/
 
 # - name: Life
 #   href: /life/
