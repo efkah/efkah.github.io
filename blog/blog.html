@@ -17,7 +17,7 @@ permalink: /blog/
 
             <!-- latest 10 blog -->
             {% assign publishedposts = (site.posts | where_exp: 'date', 'date < site.time' | sort: 'date') %}
-            {% for post in site.posts limit:1 %}
+            {% for post in publishedposts limit:1 %}
             <div class="wrapper wrapper-content  animated fadeInRight article">
                 <div class="row">
                     <div class="col-lg-10 col-lg-offset-1">
