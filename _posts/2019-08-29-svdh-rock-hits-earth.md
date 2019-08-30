@@ -11,15 +11,15 @@ icon: fa-align-center
 
 # Rock hits Earth
 
-> *Just when i thought, i found a place to stay.*
->
-> *Just when i thought, i finally found my way.*
->
-> *And the first time, in my life, i am happy,*
->
-> *The Planet starts to fade away.*
->
-> 
->
-> *The Planet explodes.*
+Just when i thought, i found a place to stay.
+
+Just when i thought, i finally found my way.
+
+And the first time, in my life, i am happy,
+
+The Planet starts to fade away.
+
+
+
+The Planet explodes.
 

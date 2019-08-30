@@ -9,11 +9,9 @@ tags: [english-poetry,old-boy-krause]
 icon: fa-align-center
 ---
 
-# Good Times / Free your Mind
-
 Good Times are calling just take up your phone
 
-A new joy of life crawls through flesh and bone
+A new joy for life crawls through flesh and bone
 
 Stop feeling pity, you are not alone
 
