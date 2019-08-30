@@ -4,7 +4,7 @@ title:  "Using the ngrok-docker-container"
 date:  2019-09-15
 desc: "Easy Tutorial of how to use the NGROK Docker"
 keywords: "Docker, ngrok, Tutorial, Easy"
-categories: [SharePoint]
+categories: [Web]
 tags: [knowledge-base,infrastructure]
 icon: fa-code
 ---
