@@ -4,7 +4,7 @@ title:  "Read Farm Account Password from Apppool"
 date:  2019-09-01
 desc: "Read Farm Account Password from Apppool"
 keywords: "SharePoint, Microsoft, Read, Farm, Account, Password, from, Apppool"
-categories: [SharePoint]
+categories: [sharepoint]
 tags: [knowledge-base,infrastructure]
 icon: fa-cloud
 ---

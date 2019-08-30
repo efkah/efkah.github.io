@@ -4,7 +4,7 @@ title:  "Good Times / Free your Mind"
 date:  2019-09-05
 desc: "A Poem about self confidence"
 keywords: "Poem, Poetry, Happiness, Depression"
-categories: [Poetry]
+categories: [poetry]
 tags: [english-poetry,old-boy-krause]
 icon: fa-align-center
 ---

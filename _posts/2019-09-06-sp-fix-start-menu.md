@@ -4,7 +4,7 @@ title:  "Fix Start Menu Bugs"
 date:  2019-09-15
 desc: "Fix Start Menu Bugs"
 keywords: "SharePoint, Microsoft, Windows, Server, Fix, Start, Menu"
-categories: [SharePoint]
+categories: [sharepoint]
 tags: [knowledge-base,infrastructure,support]
 icon: fa-cloud
 ---

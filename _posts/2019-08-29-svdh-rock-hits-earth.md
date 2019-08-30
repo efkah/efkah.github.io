@@ -4,7 +4,7 @@ title:  "Rock hits Earth"
 date:  2019-08-29
 desc: "A Poem about the environmental crisis and love"
 keywords: "Poem, Poetry, Climate, Crisis, Planet, Explodes, Love"
-categories: [Poetry]
+categories: [poetry]
 tags: [english-poetry,siegfried-von-der-halde]
 icon: fa-align-center
 ---
