@@ -28,7 +28,7 @@ author:  # change following line to your infomation.
   skill_icon2:
     - name: fa-windows
     - name: icon-html5
-  desc: I am a Full Stack engineer with profound knowledge in Microsoft SharePoint, Web and App development. Automation Ops and writing scripts experience come in handy when adapting bleeding edge framework technologies. When i am not making friends in the local developer scene, i focus on environmental activism, making music and poetry.  # Describe yourself.
+  desc: I am a Mathematician and Full Stack Software Engineer with profound knowledge in MS-SharePoint, Web and App development. Automation Ops and Scripting experience in bash and MS-PowerShell come in handy when adapting bleeding edge framework technologies. When i am not making friends in the local developer scene, i focus on environmental activism, making music and poetry.  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
