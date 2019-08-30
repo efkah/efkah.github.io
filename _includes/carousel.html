@@ -1,4 +1,4 @@
-<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+<div id="inSlider" class="carousel carousel-fade wow zoomIn" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#inSlider" data-slide-to="0" class="active"></li>
         {% for banner in site.data.index.banners offset:1 %}
@@ -6,7 +6,7 @@
         {% endfor %}
     </ol>
     <div class="carousel-inner" role="listbox">
-
+    {% assign random = site.time | date: "%s%N" | modulo: site.data.index.banners.size %}
         <div class="item active">
             <div class="container">
                 <div class="carousel-caption">
@@ -19,7 +19,7 @@
             <div
             class="header-back"
             style="background-image: url({{ '/static/assets/img/' | prepend: site.baseurl }}{{ site.data.index.banners[0].src }});"
-            title="{{ site.data.index.banners[0].title }}">
+            title="{{ site.data.index.banners[random].title }}">
             </div>
         </div>
 

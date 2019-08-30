@@ -527,7 +527,7 @@
       if (this.options.minHeight && !this._container.is("table, tbody")) {
         setTimeout(this.bind(function() {
           this._container.css({ "min-height": this._container.css("height") });
-        }, this), 1000);
+        }, this), 6870);
       }
     },
 
