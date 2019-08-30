@@ -17,9 +17,7 @@ permalink: /blog/
         <div class="wrapper wrapper-content animated fadeInRight">
 
             <!-- latest 10 blog -->
-            {% assign post = (site.posts | where_exp: 'date_end', 'date_end < site.time' | sort: 'date_start') %}
-			
-			{% for post in site.posts limit:10 %}
+            {% for post in site.posts%}
             <div class="vote-item">
                 <div class="row">
                     <div class="col-md-10">
