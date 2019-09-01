@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Fix Start Menu Bugs"
-date:  2019-09-15
+date:  2019-08-15
 desc: "Fix Start Menu Bugs"
 keywords: "SharePoint, Microsoft, Windows, Server, Fix, Start, Menu"
 categories: [sharepoint]
