@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Good Times / Free your Mind"
-date:  2019-09-05
+date:  2019-08-05
 desc: "A Poem about self confidence"
 keywords: "Poem, Poetry, Happiness, Depression"
 categories: [poetry]
