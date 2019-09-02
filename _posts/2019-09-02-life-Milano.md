@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Milano"
+title:  "Trip to Italy, Milano"
 date:  2019-09-02
 desc: "Italy Trip Blog "
 keywords: "Italy, Trip, Photos "
 categories: [life]
 tags: [italy,september-2019]
-icon: fa-Heart
+icon: fa-heart
 ---
 
 
@@ -14,4 +14,4 @@ Finally holidays are here! On our way to Venice we had a stop at Milano Grand Ce
 
 Going by train now had this unique metropolitan feeling you know from the movies at airports.
 
-[https://www.dropbox.com/s/2dtwpahy5dqz3sm/Foto%2001.09.19%2C%2010%2056%2028.jpg?dl=0](Zigaretten am Bahnsteig)
+![https://www.dropbox.com/s/2dtwpahy5dqz3sm/Foto%2001.09.19%2C%2010%2056%2028.jpg?dl=0](Zigaretten am Bahnsteig)
