@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Venice"
+title:  "Trip to Italy, Venice Day 1"
 date:  2019-09-02
 desc: "Italy trip Blog "
 keywords: "Italy, Trip, Photos "
@@ -12,4 +12,4 @@ icon: fa-heart
 Venice! Queen of the Adria. Or maybe King, whatever. On our first day checked out all the usual highlights, finishing the day with a nice pizza at the sea.
 
 Checkout the pics here:
-https://www.dropbox.com/sh/slp8zfi5csbhpbk/AABZYu_MoL1vfmUdYBgD-8GZa?dl=0
+![https://www.dropbox.com/sh/slp8zfi5csbhpbk/AABZYu_MoL1vfmUdYBgD-8GZa?dl=0](10 Dropbox Pics)
