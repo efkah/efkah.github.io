@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Milano"
-date:  2019-08-11
-desc: "Day one of Italy trip, Milano Station "
+date:  2019-09-02
+desc: "Italy Trip Blog "
 keywords: "Italy, Trip, Photos "
 categories: [life]
 tags: [italy,september-2019]
