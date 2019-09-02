@@ -1,3 +1,14 @@
+---
+layout: post
+title:  "Venice"
+date:  2019-09-02
+desc: "Italy trip Blog "
+keywords: "Italy, Trip, Photos "
+categories: [life]
+tags: [italy,september-2019]
+icon: fa-heart
+---
+
 Venice! Queen of the Adria. Or maybe King, whatever. On our first day checked out all the usual highlights, finishing the day with a nice pizza at the sea.
 
 Checkout the pics here:
