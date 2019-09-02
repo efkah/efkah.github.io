@@ -14,4 +14,4 @@ Finally holidays are here! On our way to Venice we had a stop at Milano Grand Ce
 
 Going by train now had this unique metropolitan feeling you know from the movies at airports.
 
-![https://www.dropbox.com/s/2dtwpahy5dqz3sm/Foto%2001.09.19%2C%2010%2056%2028.jpg?dl=0](Zigaretten am Bahnsteig)
+[https://www.dropbox.com/s/2dtwpahy5dqz3sm/Foto%2001.09.19%2C%2010%2056%2028.jpg?dl=0](1 Dropbox Picture)
