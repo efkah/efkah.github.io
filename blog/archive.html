@@ -4,7 +4,7 @@ title: Archive
 permalink: /archive/
 ---
 
-{% assign urlparams = page.url | split:'#' %}
+{% assign urlparams = page.url | split:'?' %}
 {% assign category = urlparams.last %}
 
 {% assign relevantposts = site.posts %}
@@ -23,11 +23,13 @@ permalink: /archive/
             <div class="ibox blog">
                 <div class="ibox-content">
                     <div class="row">
-                        <div class="col-lg-12 text-center article-title">
+                        <div class="col-lg-12 text-center">
                             <div class="pull-right"></div>
-                            <div class="navy-line"></div>
-                            <h1>Archive</h1>
-                            <p>Category: {{category}}</p>
+                            <div class="text-center article-title">
+                                <div class="navy-line"></div>
+                                <h1>Archive</h1>
+                                <p>Category: {{category}}</p>
+                            </div>
                         </div>
                     </div>
 
