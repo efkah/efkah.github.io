@@ -2018,6 +2018,15 @@ body {
   }
 }
 
+@keyframes slideInFromTopAnimation {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 @-webkit-keyframes sk-rotatePlane {
   0% {
     -webkit-transform: perspective(120px) rotateX(0) rotateY(0);
@@ -2537,6 +2546,7 @@ body {
       .active {
         opacity: 1;
         // @extend .slideInDown !optional;
+        animation: slideInFromTopAnimation 0.3s forwards;
         &.left, &.right {
           left: 0;
           opacity: 0;
