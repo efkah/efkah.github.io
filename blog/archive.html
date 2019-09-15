@@ -7,14 +7,7 @@ permalink: /archive/
 {% assign urlparams = page.url | split:'/' %}
 {% assign category = urlparams.last %}
 
-{% assign relevantposts = site.posts  %}
-
-{% if category === "archive" %}
-{% assign category = "All" %}
-{% else %}
-
-{% assign relevantposts = site.posts | where_exp "post", "post.categories contains category" %}
-{% endif %}
+{% assign relevantposts = site.posts %}
 
 
 <div class="wrapper wrapper-content  animated fadeInRight article">
@@ -36,7 +29,7 @@ permalink: /archive/
                             <div class="wrapper wrapper-content animated fadeInRight">
 
                                 <!-- latest 10 blog -->
-                                {% for post in site.posts%}
+                                {% for post in relevantposts}
                                 <div class="vote-item">
                                     <div class="row">
                                         <div class="col-md-10">
