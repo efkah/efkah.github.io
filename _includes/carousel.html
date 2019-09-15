@@ -1,7 +1,7 @@
 <div id="inSlider" class="carousel carousel-fade wow zoomIn" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#inSlider" data-slide-to="0" class="active"></li>
-        {% for banner in site.data.index.banners offset:1 %}
+        {% for banner in site.data.index.banners offset:3 %}
         <li data-target="#inSlider" data-slide-to="{{ forloop.index }}"></li>
         {% endfor %}
     </ol>
