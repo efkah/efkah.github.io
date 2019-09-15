@@ -3,6 +3,9 @@ layout: blog
 title: Blog
 permalink: /blog/
 ---
+
+<div class="ibox blog">
+    <div class="ibox-content">
 <!-- latest 1 blog -->
 {% for post in site.posts limit:1 %}
 <div class="row">
@@ -68,3 +71,6 @@ permalink: /blog/
     </div>
 </div>
 {% endfor %}
+
+</div>
+</div>

@@ -2018,12 +2018,18 @@ body {
   }
 }
 
-@keyframes slideInFromTopAnimation {
+.blog {
+  img {
+    width: 100%;
+  }
+}
+
+@keyframes carouselAnimation {
   0% {
-    transform: translateY(-100%);
+    transform: scale(0%);
   }
   100% {
-    transform: translateY(0%);
+    transform: scale(100%);
   }
 }
 
@@ -2546,7 +2552,7 @@ body {
       .active {
         opacity: 1;
         // @extend .slideInDown !optional;
-        animation: slideInFromTopAnimation 0.3s ease-out forwards;
+        animation: carouselAnimation 0.3s ease-out forwards;
         &.left, &.right {
           left: 0;
           opacity: 0;
