@@ -2536,7 +2536,7 @@ body {
       }
       .active {
         opacity: 1;
-        @extend .slideInDown;
+        @extend .slideInDown !optional;
         &.left, &.right {
           left: 0;
           opacity: 0;
