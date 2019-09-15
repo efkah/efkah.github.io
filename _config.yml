@@ -16,9 +16,12 @@ author:  # change following line to your infomation.
   last_name: Krause  # Be used at index page about me section.
   avatar: /static/assets/img/avatar.png  # upload your avatar at directory and edit it.
   github_username: efkah  # Leave blank if you don't have now
-  linkedin_id: Felix_Krause19 # Leave blank if you don't have now
+  linkedin_id: felix-krause-858695193 # Leave blank if you don't have now
   facebook_username:   # Leave blank if you don't have now
-  twitter_username:   # Leave blank if you don't have now
+  twitter_username: efkah4  # Leave blank if you don't have now
+  stackoverflow_id: 990971
+  meetup_id: 265771890
+  xing_id: Felix_Krause19
   email: felix.s.krause@googlemail.com  # Leave blank if you don't have now
   cv:  # An online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
