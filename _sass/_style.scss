@@ -296,12 +296,12 @@ body.canvas-menu .nav-header {
     margin-top: 50px;
   }
   .wrapper.wrapper-content {
-    padding: 40px;
+    padding: 0;
   }
 }
 
 .body-small .top-navigation .wrapper.wrapper-content, .top-navigation.body-small .wrapper.wrapper-content {
-  padding: 40px 0;
+  padding: 0;
 }
 
 .navbar-toggle {
@@ -1258,7 +1258,7 @@ a {
 }
 
 .wrapper-content {
-  padding: 20px 10px 40px;
+  padding: 0;
 }
 
 #page-wrapper {
