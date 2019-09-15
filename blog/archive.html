@@ -1,8 +1,21 @@
 ---
-layout: blog
+layout: archive
 title: Archive
 permalink: /archive/
 ---
+
+{% assign urlparams = page.url | split:'/' %}
+{% assign category = urlparams.last %}
+
+{% assign relevantposts = site.posts  %}
+
+{% if category === "archive" %}
+{% assign category = "All" %}
+{% else %}
+
+{% assign relevantposts = site.posts | where_exp "post", "post.categories contains category" %}
+{% endif %}
+
 
 <div class="wrapper wrapper-content  animated fadeInRight article">
     <div class="row">
@@ -11,9 +24,10 @@ permalink: /archive/
                 <div class="ibox-content">
                     <div class="row">
                         <div class="col-lg-12 text-center article-title">
+                                <div class="pull-right">
                             <div class="navy-line"></div>
                             <h1>Archive</h1>
-                            <p>Categories will follow soon...</p>
+                            <p>Category: {{category}}</p>
                         </div>
                     </div>
 
