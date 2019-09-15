@@ -9,12 +9,6 @@ permalink: /archive/
 
 {% assign relevantposts = site.posts %}
 
-{% if category == "archive" %}
-{% assign category = "All" %}
-{% else %}
-
-{% assign relevantposts = site.posts | where_exp "post", "post.categories contains category" %}
-{% endif %}
 
 
 <div class="wrapper wrapper-content  animated fadeInRight article">
