@@ -2530,22 +2530,21 @@ body {
   .carousel-fade {
     .carousel-inner {
       .item {
-        transition: all .7s ease-in;
-        // transform: scaleX(0);
-        // transform-origin: left;
-        top: 0;
-        position: absolute;
-        display: block;
-        transform: translateX(-100%);
+        opacity: 0;
+        -webkit-transition-property: opacity;
+        transition-property: opacity;
       }
       .active {
-        // transform: scaleX(1);
-        transform: translateX(0%);
-        // transform-origin: right;
-
-        ~ .item {
-          transform: translateX(100%);
+        opacity: 1;
+        @extend .slideInDown;
+        &.left, &.right {
+          left: 0;
+          opacity: 0;
+          z-index: 1;
         }
+      }
+      .next.left, .prev.right {
+        opacity: 1;
       }
     }
     .carousel-control {
