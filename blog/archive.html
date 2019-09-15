@@ -4,10 +4,6 @@ title: Archive
 permalink: /archive/
 ---
 
-{% assign urlparams = page.url | split:'/' %}
-{% assign category = urlparams.last %}
-
-{% assign relevantposts = site.posts %}
 
 
 <div class="wrapper wrapper-content  animated fadeInRight article">
@@ -20,7 +16,6 @@ permalink: /archive/
                                 <div class="pull-right">
                             <div class="navy-line"></div>
                             <h1>Archive</h1>
-                            <p>Category: {{category}}</p>
                         </div>
                     </div>
 
@@ -29,7 +24,7 @@ permalink: /archive/
                             <div class="wrapper wrapper-content animated fadeInRight">
 
                                 <!-- latest 10 blog -->
-                                {% for post in relevantposts}
+                                {% for post in site.posts}
                                 <div class="vote-item">
                                     <div class="row">
                                         <div class="col-md-10">
