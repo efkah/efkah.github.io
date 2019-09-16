@@ -2,7 +2,7 @@
 <div id="inSlider" class="carousel carousel-fade wow zoomIn" data-ride="carousel">
     <ol class="carousel-indicators">
         {% for banner in site.data.index.banners offset:0 %}
-        {% assign i = forloop.index - 1 %}
+        {% assign i = forloop.index | minus: 1  %}
             {% if random == i %}
                 <li data-target="#inSlider" data-slide-to="{{ i }}" class="active"></li>
             {% else %}
