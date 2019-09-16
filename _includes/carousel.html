@@ -1,7 +1,7 @@
 {% assign random = site.time | date: "%s%N" | modulo: site.data.index.banners.size %}
 <div id="inSlider" class="carousel carousel-fade wow zoomIn" data-ride="carousel">
     <ol class="carousel-indicators">
-        {% for banner in site.data.index.banners %}
+        {% for banner in site.data.index.banners offset:0 %}
             {% if forloop.index == random %}
                 <li data-target="#inSlider" data-slide-to="{{ forloop.index }}" class="active"></li>
             {% else %}
@@ -10,6 +10,8 @@
         {% endfor %}
     </ol>
     <div class="carousel-inner" role="listbox">
+        {% for banner in site.data.index.banners offset:0 %}
+            {% if forloop.index == random %}
         <div class="item active">
             <div class="container">
                 <div class="carousel-caption">
@@ -26,7 +28,7 @@
             </div>
         </div>
 
-        {% for banner in site.data.index.banners offset:1 %}
+            {% else %}
         <div class="item">
             <div class="container">
                 <div class="carousel-caption">
@@ -38,6 +40,7 @@
             <!-- Set background for slide in css -->
             <div class="header-back" style="background-image: url({{ "/static/assets/img/"  | prepend: site.baseurl }}{{ banner.src }});" title="{{ banner.title }}"></div>
         </div>
+            {% endif %}
         {% endfor %}
 
     </div>
