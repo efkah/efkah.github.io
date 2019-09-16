@@ -1,4 +1,5 @@
 {% assign random = site.time | date: "%s%N" | modulo: site.data.index.banners.size %}
+<h1>{{random}}</h1>
 <div id="inSlider" class="carousel carousel-fade wow zoomIn" data-ride="carousel">
     <ol class="carousel-indicators">
         {% for banner in site.data.index.banners offset:0 %}
