@@ -3,9 +3,9 @@
     <ol class="carousel-indicators">
         {% for banner in site.data.index.banners offset:0 %}
             {% if forloop.index == random %}
-                <li data-target="#inSlider" data-slide-to="{{ forloop.index }}" class="active"></li>
+                <li data-target="#inSlider" data-slide-to="{{ forloop.index - 1 }}" class="active"></li>
             {% else %}
-                <li data-target="#inSlider" data-slide-to="{{ forloop.index }}"></li>
+                <li data-target="#inSlider" data-slide-to="{{ forloop.index - 1 }}"></li>
             {% endif %}
         {% endfor %}
     </ol>
