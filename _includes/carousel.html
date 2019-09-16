@@ -2,10 +2,11 @@
 <div id="inSlider" class="carousel carousel-fade wow zoomIn" data-ride="carousel">
     <ol class="carousel-indicators">
         {% for banner in site.data.index.banners offset:0 %}
-            {% if forloop.index == random - 1 %}
-                <li data-target="#inSlider" data-slide-to="{{ forloop.index - 1 }}" class="active"></li>
+        {% assign i = forloop.index - 1 %}
+            {% if random == i %}
+                <li data-target="#inSlider" data-slide-to="{{ i }}" class="active"></li>
             {% else %}
-                <li data-target="#inSlider" data-slide-to="{{ forloop.index - 1 }}"></li>
+                <li data-target="#inSlider" data-slide-to="{{ i }}"></li>
             {% endif %}
         {% endfor %}
     </ol>
