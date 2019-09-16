@@ -12,7 +12,8 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         {% for banner in site.data.index.banners offset:0 %}
-            {% if forloop.index == random %}
+        {% assign i = forloop.index | minus: 1  %}
+            {% if i == random %}
         <div class="item active">
             <div class="container">
                 <div class="carousel-caption">
