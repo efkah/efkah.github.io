@@ -34,6 +34,24 @@ layout: default
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="wrapper wrapper-content animated fadeInRight">
                                 {{ content }}
+
+                                {% if page.story %}
+                                <div class="wrapper wrapper-content animated fadeInRight">
+                                    <h1>Read on</i></h1>
+                                    {% assign completeStory = site.posts | where_exp: "item", "item.story == page.story" %}
+                                    <ul>
+                                        {% for post in completeStory %}
+                                        {% if post.url == page.url %}
+                                        {% assign bold = "font-weight: bold" %}
+                                        {% endif %}
+                                        <li>
+                                            <a href="{{ post.url | prepend: site.baseurl}}"
+                                                style="{{ bold }}">{{ post.title }}</a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endif %}
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -71,26 +89,6 @@ layout: default
                             </div>
                         </div>
                     </div>
-
-
-                    {% if page.story %}
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="wrapper wrapper-content animated fadeInRight">
-                                <h1><i>Read On!</i></h1>
-                                {% assign completeStory = site.posts | where_exp: "item", "item.story == page.story" %}
-                                <ul>
-                                    {% for post in completeStory %}
-                                    <li>
-                                        <a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
-
                 </div>
 
             </div>
