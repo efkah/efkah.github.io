@@ -73,12 +73,12 @@ layout: default
                     </div>
 
 
-                    {% if story %}
+                    {% if page.story %}
                     <div class="row">
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="wrapper wrapper-content animated fadeInRight">
                                 <h1><i>Read On!</i></h1>
-                                {% assign completeStory = site.posts | where_exp: "item", "item.story == story" %}
+                                {% assign completeStory = site.posts | where_exp: "item", "item.story == page.story" %}
                                 <ul>
                                     {% for post in completeStory %}
                                     <li>
