@@ -83,9 +83,9 @@ permalink: /blog/
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="wrapper wrapper-content animated fadeInRight">
                                 <h1>Weiterlesen</h1>
-                                {% assign storyboards = site.posts | where_exp: "item", "item.story == post.story" %}
+                                {% assign story = site.posts | where_exp: "item", "item.story == post.story" %}
                                 <ul>
-                                    {% for post in site.posts | where_exp: "item", "item.story == 'italy-19'" %}
+                                    {% for post in story %}
                                     <li>
                                         <a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
                                     </li>
