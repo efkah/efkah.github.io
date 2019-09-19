@@ -4,7 +4,7 @@ title: Blog
 permalink: /blog/
 ---
 
-<div class="wrapper wrapper-content  animated fadeInRight article">
+<div class="wrapper wrapper-content  animated fadeInRight post article">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
             <div class="ibox blog">
@@ -74,6 +74,27 @@ permalink: /blog/
                             </div>
                         </div>
                     </div>
+
+
+
+
+                    {% if post.story %}
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="wrapper wrapper-content animated fadeInRight">
+                                <h1>Weiterlesen</h1>
+                                {% assign storyboards = site.posts | where_exp: "item", "item.story == post.story" %}
+                                <ul>
+                                    {% for post in site.posts | where_exp: "item", "item.story == 'italy-19'" %}
+                                    <li>
+                                        <a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    {% endif %}
                     {% endfor %}
 
                 </div>

@@ -1,16 +1,17 @@
 <!-- jPages -->
 <script type="text/javascript">
-$(function(){
-  /* initiate the plugin */
-  $("div.pag-holder").jPages({
-      containerID  : "pag-itemContainer",
-      perPage      : 5,  /* num of items per page */
-      startPage    : 1,
-      startRange   : 1,
-      midRange     : 3,
-      endRange     : 1
-  });
-});
+    $(function () {
+        /* initiate the plugin */
+        $("div.pag-holder").jPages({
+            containerID: "pag-itemContainer",
+            perPage: 5,
+            /* num of items per page */
+            startPage: 1,
+            startRange: 1,
+            midRange: 3,
+            endRange: 1
+        });
+    });
 </script>
 
 <div class="row">
@@ -29,13 +30,14 @@ $(function(){
             {% assign counter = counter | plus: 1 %}
             <li>
                 <div class="col-lg-8 col-lg-offset-2">
-                    <div class="ibox blog">
+                    <div class="ibox">
                         <div class="ibox-content">
                             <a href="{{ post.url | prepend: site.baseurl }}" class="btn-link">
                                 <h2>{{ post.title }}</h2>
                             </a>
                             <div class="small m-b-xs">
-                                <strong>{{ site.author.name }}</strong> <span class="text-muted"><i class="fa fa-clock-o"></i> {{ post.date | date: "%-d %b %Y" }}</span>
+                                <strong>{{ site.author.name }}</strong> <span class="text-muted"><i
+                                        class="fa fa-clock-o"></i> {{ post.date | date: "%-d %b %Y" }}</span>
                             </div>
                             <p>
                                 {{ post.content | strip_html | truncate:100 }}
@@ -51,7 +53,8 @@ $(function(){
                                     <div class="small text-right">
                                         <div>
                                             {% if site.disqus %}
-                                            <i class="fa fa-comments-o"> </i> <span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ post.url }}">0</span> comments
+                                            <i class="fa fa-comments-o"> </i> <span class="disqus-comment-count"
+                                                data-disqus-url="{{ site.url }}{{ post.url }}">0</span> comments
                                             {% endif %}
                                         </div>
                                     </div>
