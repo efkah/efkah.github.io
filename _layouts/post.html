@@ -36,16 +36,16 @@ layout: default
                                 {{ content }}
 
                                 {% if page.story %}
-                                <div class="wrapper wrapper-content animated fadeInRight">
-                                    <div class="text-center article-title">
-                                        <div class="navy-line"></div>
+                                <div class="wrapper wrapper-content animated fadeInRight" style="clear:both">
+                                    <div class="text-center article-title" style="margin:auto; padding: 40px 0 20px;">
+                                        <div class="navy-line" style="margin: auto"></div>
                                         <h1>
                                             <h1>Read on</i></h1>
                                         </h1>
                                         {% assign completeStory = site.posts | where_exp: "item", "item.story == page.story" %}
                                         {% for post in completeStory %}
-                                        <a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
-                                        <div class="text-muted">{{ post.description }}</div>
+                                        <div style="padding-top: 3px;"><a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a></div>
+                                        <div style="color:#888">{{ post.description }}</div>
                                         {% endfor %}
                                     </div>
                                 </div>
