@@ -37,19 +37,17 @@ layout: default
 
                                 {% if page.story %}
                                 <div class="wrapper wrapper-content animated fadeInRight">
-                                    <h1>Read on</i></h1>
-                                    {% assign completeStory = site.posts | where_exp: "item", "item.story == page.story" %}
-                                    <ul>
+                                    <div class="text-center article-title">
+                                        <div class="navy-line"></div>
+                                        <h1>
+                                            <h1>Read on</i></h1>
+                                        </h1>
+                                        {% assign completeStory = site.posts | where_exp: "item", "item.story == page.story" %}
                                         {% for post in completeStory %}
-                                        {% if post.url == page.url %}
-                                        {% assign bold = "font-weight: bold" %}
-                                        {% endif %}
-                                        <li>
-                                            <a href="{{ post.url | prepend: site.baseurl}}"
-                                                style="{{ bold }}">{{ post.title }}</a>
-                                        </li>
+                                        <a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
+                                        <div class="text-muted">{{ post.description }}</div>
                                         {% endfor %}
-                                    </ul>
+                                    </div>
                                 </div>
                                 {% endif %}
                                 <hr>
