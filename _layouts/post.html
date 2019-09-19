@@ -42,10 +42,12 @@ layout: default
                                         <h1>
                                             <h1>Read on</i></h1>
                                         </h1>
-                                        {% assign completeStory = site.posts | where_exp: "item", "item.story == page.story" %}
-                                        {% for post in completeStory %}
-                                        <div style="padding-top: 3px;"><a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a></div>
-                                        <div style="color:#888">{{ post.description }}</div>
+                                        {% assign completeStory = site.posts | where_exp: "item", "item.story == page.story" | sort "part" %}
+                                        {% for storypost in completeStory %}
+                                        <div style="padding-top: .5em;"><a
+                                                href="{{ storypost.url | prepend: site.baseurl}}">{{ storypost.title }}</a>
+                                        </div>
+                                        <div style="color:#888">{{ storypost.desc }}</div>
                                         {% endfor %}
                                     </div>
                                 </div>

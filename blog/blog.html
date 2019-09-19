@@ -37,6 +37,23 @@ permalink: /blog/
                         <div class="col-lg-8 col-lg-offset-2">
                             <div class="wrapper wrapper-content animated fadeInRight">
                                 {{ post.content }}
+
+{% if post.story %}
+<div class="wrapper wrapper-content animated fadeInRight" style="clear:both">
+    <div class="text-center article-title" style="margin:auto; padding: 40px 0 20px;">
+        <div class="navy-line" style="margin: auto"></div>
+        <h1>
+            <h1>Read on</i></h1>
+        </h1>
+        {% assign completeStory = site.posts | where_exp: "item", "item.story == post.story" | sort "part" %}
+        {% for storypost in completeStory %}
+        <div style="padding-top: .5em;"><a href="{{ storypost.url | prepend: site.baseurl}}">{{ storypost.title }}</a>
+        </div>
+        <div style="color:#888">{{ storypost.desc }}</div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
                                 <hr>
                                 <div class="row">
                                     <div class="col-md-6">
@@ -74,27 +91,6 @@ permalink: /blog/
                             </div>
                         </div>
                     </div>
-
-
-
-
-                    {% if post.story %}
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="wrapper wrapper-content animated fadeInRight">
-                                <h1>Weiterlesen</h1>
-                                {% assign story = site.posts | where_exp: "item", "item.story == post.story" %}
-                                <ul>
-                                    {% for post in story %}
-                                    <li>
-                                        <a href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
-                                    </li>
-                                    {% endfor %}
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    {% endif %}
                     {% endfor %}
 
                 </div>
