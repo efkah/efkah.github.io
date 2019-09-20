@@ -4,8 +4,8 @@ title:  "Update User Profile Without Sync"
 date:  2019-08-15
 desc: "Update User Profile Without Sync"
 keywords: "SharePoint, Microsoft, Update, User, Profile, Service, Without, Sync"
-categories: [sharepoint]
-tags: [knowledge-base,infrastructure]
+categories: [easy-as-pi]
+tags: [sharepoint,infrastructure]
 icon: fa-cloud
 ---
 

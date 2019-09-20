@@ -4,8 +4,8 @@ title:  "Delete Office Cache"
 date:  2019-08-27
 desc: "Delete Office Cache"
 keywords: "SharePoint, Microsoft, Word, Excel, Delete, Office, Cache"
-categories: [sharepoint]
-tags: [knowledge-base,support]
+categories: [easy-as-pi]
+tags: [sharepoint,support]
 icon: fa-cloud
 ---
 
