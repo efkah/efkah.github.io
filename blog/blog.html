@@ -9,7 +9,7 @@ permalink: /blog/
         <div class="ibox blog">
             <div class="ibox-content">
     <!-- latest 1 blog -->
-    {% for post in site.posts| sort: "date" | limit:1 %}
+    {% for post in site.posts| sort: "date" | limit: 5 %}
     <div class="row animated rotateInUpLeft">
         {% include plainpost.html %}
     </div>
