@@ -6,10 +6,10 @@ permalink: /blog/
 
 <div class="wrapper wrapper-content">
         <div class="ibox blog">
-            <div class="ibox-content">
+            <div style="padding: 0 20px">
     <!-- latest 1 blog -->
-    {% for post in site.posts| sort: "date" | limit: 5 %}
-    <div class="row animated wow rotateInUpLeft" style="border-top: 1px solid #888;">
+    {% for post in site.posts| sort: "date" | limit: 3 %}
+    <div class="row animated wow rotateInUpLeft" style="border-top: 1px solid #e7eaec;">
         {% include plainpost.html %}
     </div>
     {% endfor %}
