@@ -9,7 +9,7 @@ permalink: /blog/
             <div style="padding: 0 20px">
     <!-- latest 1 blog -->
     {% for post in site.posts| sort: "date" | limit: 3 %}
-    <div class="row animated wow rotateInUpLeft" style="border-top: 1px solid #e7eaec;">
+    <div class="row animated wow rotateInUpLeft" style="border-top: 1px solid #e7eaec;margin-bottom:2px;border-bottom: 1px solid #e7eaec;">
         {% include plainpost.html %}
     </div>
     {% endfor %}
