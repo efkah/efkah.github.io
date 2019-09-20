@@ -1,8 +1,8 @@
 # blog page sections
-- name: Blog
+- name: blog
   href: /blog/
 
-- name: Archive
+- name: archive
   href: /archive/
 
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)

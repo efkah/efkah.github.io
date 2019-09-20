@@ -4,97 +4,15 @@ title: Blog
 permalink: /blog/
 ---
 
-<div class="wrapper wrapper-content  animated fadeInRight post article">
-    <div class="row">
-        <div class="col-lg-10 col-lg-offset-1">
-            <div class="ibox blog">
-                <div class="ibox-content">
-                    <!-- latest 1 blog -->
-                    {% for post in site.posts limit:1 %}
-                    <div class="row">
-                        <div class="col-lg-12 text-center">
-                            <div class="pull-right">
-                                {% for category in post.categories %}
-                                <a class="btn btn-white btn-xs"
-                                    href="{{ category | prepend: 'archive-' | downcase | prepend: '/' | prepend: site.baseurl }}">{{ category }}</a>
-                                {% endfor %}
-                            </div>
-                            <div class="text-center article-title">
-                                <div class="navy-line"></div>
-                                <h1>
-                                    {{ post.title }}
-                                </h1>
-                                <span class="text-muted"><i class="fa fa-clock-o"></i>
-                                    {{ post.date | date: "%-d %b %Y" }} -
-                                    Latest Blog Entry</span>
-                            </div>
-                        </div>
-                    </div>
-
-
-
-                    <div class="row">
-                        <div class="col-lg-8 col-lg-offset-2">
-                            <div class="wrapper wrapper-content animated fadeInRight">
-                                {{ post.content }}
-
-{% if post.story %}
-<div class="wrapper wrapper-content animated fadeInRight" style="clear:both">
-    <div class="text-center article-title" style="margin:auto; padding: 40px 0 20px;">
-        <div class="navy-line" style="margin: auto"></div>
-        <h1>
-            <h1>Read on</i></h1>
-        </h1>
-        {% assign completeStory = site.posts | where_exp: "item", "item.story == post.story" | sort "part" %}
-        {% for storypost in completeStory %}
-        <div style="padding-top: .5em;"><a href="{{ storypost.url | prepend: site.baseurl}}">{{ storypost.title }}</a>
-        </div>
-        <div style="color:#888">{{ storypost.desc }}</div>
-        {% endfor %}
+<div class="wrapper wrapper-content">
+        <div class="ibox blog">
+            <div class="ibox-content">
+    <!-- latest 1 blog -->
+    {% for post in site.posts limit:3 %}
+    <div class="row animated rotateInUpLeft">
+        {% include plainpost.html %}
     </div>
+    {% endfor %}
 </div>
-{% endif %}
-                                <hr>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <h5 style="display: inline;">Tags:</h5>
-                                        {% for tag in post.tags %}
-                                        <button class="btn btn-white btn-xs" type="button">{{ tag }}</button>
-                                        {% endfor %}
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="small text-right">
-                                            <div>
-                                                {% if site.disqus %}
-                                                <i class="fa fa-comments-o"> </i> <span class="disqus-comment-count"
-                                                    data-disqus-url="{{ site.url }}{{ page.url }}">0</span> comments
-                                                {% endif %}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <!-- donate -->
-                                        {% if site.donation %}
-                                        {% include donate.html %}
-                                        {% endif %}
-                                        <br>
-                                        <!-- share -->
-                                        {% include share.html %}
-                                        <br>
-                                        <!-- comment -->
-                                        {% include comments.html %}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    {% endfor %}
-
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 </div>

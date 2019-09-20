@@ -1,8 +1,12 @@
 ---
-layout: default
+layout: blog
 ---
 
-
+{% assign page = post %}
+<div class="row animated rotateInUpLeft">
+    {% include plainpost.html %}
+</div>
+<!-- 
 <div class="wrapper wrapper-content  animated fadeInRight post article">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
@@ -10,14 +14,19 @@ layout: default
                 <div class="ibox-content">
                     <div class="row">
                         <div class="col-lg-12 text-center">
-                            <div class="pull-right">
-                                {% for category in page.categories %}
-                                <a class="btn btn-white btn-xs"
-                                    href="{{ category | downcase | prepend: '/' | prepend: site.baseurl }}">{{ category }}</a>
-                                {% endfor %}
-                            </div>
                             <div class="text-center article-title">
                                 <div class="navy-line"></div>
+                                <div class="text-center" style="padding-top: 10px">
+                                    {% for sitecategory in site.categories %}
+                                    {% assign category = sitecategory[0] %}
+                                    {% assign btnSelected = "" %}
+                                    {% if post.categories contains category %}
+                                    {% assign btnSelected = "active" %}
+                                    {% endif %}
+                                    <a class="btn btn-white btn-xs {{btnSelected}}" style="width: 88px; margin: 0;"
+                                        href="{{ category | downcase | prepend: '/' | prepend: site.baseurl }}">{{ category | upcase }}</a>
+                                    {% endfor %}
+                                </div>
                                 <h1>
                                     {{ page.title }}
                                 </h1>
@@ -42,7 +51,8 @@ layout: default
                                         <h1>
                                             <h1>Read on</i></h1>
                                         </h1>
-                                        {% assign completeStory = site.posts | where_exp: "item", "item.story == page.story" | sort "part" %}
+                                        {% assign completeStorySort = site.posts | where_exp: "item", "item.story == page.story" %}
+                                        {% assign completeStory = completeStorySort | sort: "part" %}
                                         {% for storypost in completeStory %}
                                         <div style="padding-top: .5em;"><a
                                                 href="{{ storypost.url | prepend: site.baseurl}}">{{ storypost.title }}</a>
@@ -95,4 +105,4 @@ layout: default
         </div>
     </div>
 
-</div>
+</div> -->
