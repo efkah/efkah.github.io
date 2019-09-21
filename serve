@@ -1,0 +1,2 @@
+#!/bin/bash
+docker run --rm -it --name "efkah.github.io" --volume=${PWD}:/srv/jekyll -p 4000:4000 jekyll/builder:latest jekyll serve  --watch --force_polling
