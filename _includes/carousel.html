@@ -1,5 +1,5 @@
 {% assign random = site.time | date: "%N" | modulo: site.data.index.banners.size %}
-<div id="inSlider" class="carousel carousel-fade wow zoomIn" data-ride="carousel">
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
         {% for banner in site.data.index.banners offset:0 %}
         {% assign i = forloop.index | minus: 1  %}
@@ -18,7 +18,7 @@
             <div class="container">
                 <div class="carousel-caption">
                 </div>
-                <div class="carousel-image wow zoomIn">
+                <div class="carousel-image">
                     <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
                 </div>
             </div>
@@ -35,7 +35,7 @@
             <div class="container">
                 <div class="carousel-caption">
                 </div>
-                <div class="carousel-image wow zoomIn">
+                <div class="carousel-image">
                     <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
                 </div>
             </div>

@@ -338,6 +338,9 @@ body.canvas-menu .nav-header {
   .menu-visible-lg, .menu-visible-md {
     display: block !important;
   }
+  .landing-page .social-icon a {
+    zoom: 1.68;
+  }
 }
 
 button.dim {
@@ -2042,7 +2045,11 @@ body {
 
 @keyframes carouselAnimation {
   0% {
-    transform: scale(0);
+    transform: scale(1);
+  }
+
+  68% {
+    transform: scale(1.04);
   }
   100% {
     transform: scale(1);
