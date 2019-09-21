@@ -8,11 +8,21 @@ permalink: /blog/
         <div class="ibox blog">
             <div style="padding: 0 20px">
     <!-- latest 1 blog -->
-    {% for post in site.posts| sort: "date" | limit: 3 %}
-    <div class="row animated wow rotateInUpLeft" style="border-top: 1px solid #e7eaec;margin-bottom:2px;border-bottom: 1px solid #e7eaec;">
+    {% for post in site.posts| sort: "date" | limit: 5 %}
+    <div class="row animated wow zoomInUp" style="border-top: 1px solid #e7eaec;margin-bottom:2px;border-bottom: 1px solid #e7eaec;">
         {% include plainpost.html %}
     </div>
     {% endfor %}
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <div class="text-center article-title">
+                <div class="navy-line"></div>
+                <h1>
+                    END OF SITE
+                </h1>
+                <span class="text-muted"><i class="fa fa-archive"></i>
+                    For More, visit the Archives Page</span>
+</div> </div> </div>
 </div>
 </div>
 </div>
