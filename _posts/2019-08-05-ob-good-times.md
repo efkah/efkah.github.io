@@ -7,6 +7,7 @@ keywords: "Poem, Poetry, Happiness, Depression"
 categories: [poetry]
 tags: [english-poetry,old-boy-krause]
 icon: fa-align-center
+bannerid: 5
 ---
 
 Good Times are calling just take up your phone

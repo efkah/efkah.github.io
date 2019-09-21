@@ -1,19 +1,28 @@
-{% assign random = site.time | date: "%N" | modulo: site.data.index.banners.size %}
+{% if page.bannerid > -1 %}
+{% assign startIndex = 0 %}
+{{ assign s = post.bannerid }}
+{% assign relevantbanners = site.data.index.banners | slice s, 1  %}
+{{ site.data.index.banners }}
+{{ relevantbanners }}
+{% else %}
+{% assign startIndex = site.time | date: "%N" | modulo: site.data.index.banners.size %}
+{% assign relevantbanners = site.data.index.banners %}
+{% endif %}
 <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
-        {% for banner in site.data.index.banners offset:0 %}
+        {% for banner in relevantbanners offset:0 %}
         {% assign i = forloop.index | minus: 1  %}
-            {% if random == i %}
-                <li data-target="#inSlider" data-slide-to="{{ i }}" class="active"></li>
-            {% else %}
-                <li data-target="#inSlider" data-slide-to="{{ i }}"></li>
-            {% endif %}
+        {% if startIndex == i %}
+        <li data-target="#inSlider" data-slide-to="{{ i }}" class="active"></li>
+        {% else %}
+        <li data-target="#inSlider" data-slide-to="{{ i }}"></li>
+        {% endif %}
         {% endfor %}
     </ol>
     <div class="carousel-inner" role="listbox">
-        {% for banner in site.data.index.banners offset:0 %}
+        {% for banner in relevantbanners offset:0 %}
         {% assign i = forloop.index | minus: 1  %}
-            {% if i == random %}
+        {% if i == startIndex %}
         <div class="item active">
             <div class="container">
                 <div class="carousel-caption">
@@ -23,14 +32,13 @@
                 </div>
             </div>
             <!-- Set background for slide in css -->
-            <div
-            class="header-back"
-            style="background-image: url({{ '/static/assets/img/' | prepend: site.baseurl }}{{ site.data.index.banners[random].src }});"
-            title="{{ site.data.index.banners[random].title }}">
+            <div class="header-back"
+                style="background-image: url({{ '/static/assets/img/' | prepend: site.baseurl }}{{ banners[startIndex].src }});"
+                title="{{ banners[startIndex].title }}">
             </div>
         </div>
 
-            {% else %}
+        {% else %}
         <div class="item">
             <div class="container">
                 <div class="carousel-caption">
@@ -40,9 +48,11 @@
                 </div>
             </div>
             <!-- Set background for slide in css -->
-            <div class="header-back" style="background-image: url({{ "/static/assets/img/"  | prepend: site.baseurl }}{{ banner.src }});" title="{{ banner.title }}"></div>
+            <div class="header-back"
+                style="background-image: url({{ "/static/assets/img/"  | prepend: site.baseurl }}{{ banner.src }});"
+                title="{{ banner.title }}"></div>
         </div>
-            {% endif %}
+        {% endif %}
         {% endfor %}
 
     </div>

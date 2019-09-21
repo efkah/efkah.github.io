@@ -7,6 +7,7 @@ keywords: "SharePoint, Microsoft, Windows, Server, Fix, Start, Menu"
 categories: [easy-as-pi]
 tags: [sharepoint,infrastructure,support]
 icon: fa-cloud
+bannerid: 0
 ---
 
 > Although not really affiliated with SharePoint, this happened while dealing with it:

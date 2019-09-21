@@ -7,6 +7,7 @@ keywords: "SharePoint, Microsoft, Update, User, Profile, Service, Without, Sync"
 categories: [easy-as-pi]
 tags: [sharepoint,infrastructure]
 icon: fa-cloud
+bannerid: 1
 ---
 
 > I recently came accross a problem, where the customer had UPS and did run it once before switching it off. He wanted a script to update users, without touching the User Profile Service. *I hope to be able to translate this until the official release date ;-)*

@@ -7,6 +7,7 @@ keywords: "SharePoint, Microsoft, Word, Excel, Delete, Office, Cache"
 categories: [easy-as-pi]
 tags: [sharepoint,support]
 icon: fa-cloud
+bannerid: 3
 ---
 
 ### Problem

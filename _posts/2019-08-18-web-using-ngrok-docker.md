@@ -7,6 +7,7 @@ keywords: "Docker, ngrok, Tutorial, Easy"
 categories: [easy-as-pi]
 tags: [web,infrastructure]
 icon: fa-code
+bannerid: 2
 ---
 
 > More Text will follow
