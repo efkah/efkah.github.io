@@ -1,16 +1,32 @@
-{% if page.bannerid > -1 %}
-{% assign startIndex = 0 %}
-{{ assign s = post.bannerid }}
-{% assign relevantbanners = site.data.index.banners | slice s, 1  %}
-{{ site.data.index.banners }}
-{{ relevantbanners }}
+{% if page.bannerid %}
+{% assign pagebanner = site.data.index.banners[page.bannerid]  %}
+
+<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+        {% for banner in site.data.index.banners offset:0 %}
+        {% assign i = forloop.index | minus: 1  %}
+        {% if i == startIndex %}
+        <div class="item active">
+            <div class="container">
+                <div class="carousel-caption">
+                </div>
+                <div class="carousel-image">
+                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
+                </div>
+            </div>
+            <!-- Set background for slide in css -->
+            <div class="header-back"
+                style="background-image: url({{ '/static/assets/img/' | prepend: site.baseurl }}{{ pagebanner.src }});"
+                title="{{ pagebanner.title }}">
+            </div>
+        </div>
+    </div>
+</div>
 {% else %}
 {% assign startIndex = site.time | date: "%N" | modulo: site.data.index.banners.size %}
-{% assign relevantbanners = site.data.index.banners %}
-{% endif %}
 <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
-        {% for banner in relevantbanners offset:0 %}
+        {% for banner in site.data.index.banners offset:0 %}
         {% assign i = forloop.index | minus: 1  %}
         {% if startIndex == i %}
         <li data-target="#inSlider" data-slide-to="{{ i }}" class="active"></li>
@@ -20,7 +36,7 @@
         {% endfor %}
     </ol>
     <div class="carousel-inner" role="listbox">
-        {% for banner in relevantbanners offset:0 %}
+        {% for banner in site.data.index.banners offset:0 %}
         {% assign i = forloop.index | minus: 1  %}
         {% if i == startIndex %}
         <div class="item active">
@@ -65,3 +81,4 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
+{% endif %}
