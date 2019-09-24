@@ -3,9 +3,6 @@
 
 <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
     <div class="carousel-inner" role="listbox">
-        {% for banner in site.data.index.banners offset:0 %}
-        {% assign i = forloop.index | minus: 1  %}
-        {% if i == startIndex %}
         <div class="item active">
             <div class="container">
                 <div class="carousel-caption">
