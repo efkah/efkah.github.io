@@ -2,11 +2,17 @@
 - last_name: GitHub
   first_name: Page
   desc: Privacy Policy
-  website: https://efkah.github.io/static/assets/privacy-policy/privacy-policy.md
+  website: https://efkah.github.io/static/assets/privacy-policy/privacy-policy
   email: felix.s.krause@googlemail.com
 
-- last_name: iOS
-  first_name: ShapeStacker
+- last_name: ShapeStacker iOS
+  first_name: 
   desc: Privacy Policy
-  website: https://efkah.github.io/static/assets/privacy-policy/ios-shapestacker/privacy-policy.md
+  website: https://efkah.github.io/static/assets/privacy-policy/ios-shapestacker/privacy-policy
+  email: felix.s.krause@googlemail.com
+
+- last_name: Sticker
+  first_name: Tool
+  desc: Privacy Policy
+  website: https://efkah.github.io/static/assets/privacy-policy/sticker-tool/privacy-policy
   email: felix.s.krause@googlemail.com
