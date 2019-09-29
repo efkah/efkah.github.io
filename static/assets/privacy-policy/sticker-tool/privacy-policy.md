@@ -4,6 +4,12 @@
  * The app "Sticker Tool" does not use any interfaces (i.e. Motion Tracking, Microphone...) of your mobile device.
  * There might be traces of the app "Sticker Tool" left after uninstalling.
 
+## Uncredited Stickers
+
+ * All Stickers used in the pack are courtesy of somebody.
+ * I expect to have no troubles using them, please message me if you feel otherwise.
+ * Commercial use of the Stickers or the Tool is forbidden.
+
 ## Privacy Policy
 
 Felix Krause built the Sticker Tool app as a Commercial app. This SERVICE is provided by Felix Krause and is intended for use as is.
