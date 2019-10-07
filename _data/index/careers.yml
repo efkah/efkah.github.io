@@ -1,19 +1,32 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
+    detail: Ideen? Lorraine!
+    i18n: career_7
+  desc:
+    detail: Wait, what? I am currently evaluating the risks and values of a fresh new start. "Ideen? Lorraine!" will help you with everything you need in the current economy while creating new ideas for the world of tomorrow. While this is being planned, please note, that i am open for freelance jobs (Solutions engineer) in the fields of Swift, Web und .NET.
+    i18n: career_7_desc
+  date:
+    detail: starting January 2019
+    i18n: career_7_date
+  job:
+    detail: Entrepeneur
+    i18n: career_7_job
+  icon: fa-rocket
+
+- name:
     detail: GARAIO - Refreshing Software
     i18n: career_6
   desc:
     detail: Going back to GARAIO AG i could again boost my SharePoint, Office 365 and Frontend skills. While adopting to the swiss life style i am sharpening my profile and learning cutting edge technologies.
     i18n: career_6_desc
   date:
-    detail: since late 2017
+    detail: late 2017
     i18n: career_6_date
   job:
     detail: SharePoint Solution Specialist
     i18n: career_6_job
-  icon: fa-star
-  present: true
+  icon: fa-calendar
   
 - name:
     detail: H-O-T - Let's optimize excellence
