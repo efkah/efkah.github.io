@@ -13,6 +13,7 @@
     detail: Entrepeneur
     i18n: career_7_job
   icon: fa-rocket
+  present: true
 
 - name:
     detail: GARAIO - Refreshing Software
