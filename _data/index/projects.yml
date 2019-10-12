@@ -1,14 +1,6 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-
-
-- name: efkah/sticker-tool
-  i18n: efkah
-  gh_user: efkah
-  repo: sticker-tool
-  img: /static/assets/img/landing/projects-sticker-tool.png
-  desc: Currently on bitbucket, will move it soon.
     
 - name: efkah/shapestacker-core
   i18n: efkah
@@ -17,12 +9,12 @@
   img: /static/assets/img/landing/projects-shapestacker.png
   desc: Currently on bitbucket, will move it soon.
   
-- name: efkah/emoji-font-example
+- name: efkah/sparkle.js
   i18n: efkah
   gh_user: efkah
-  repo: emoji-font-example
-  img: /static/assets/img/landing/projects-emoji-font-example.png
-  desc: While researching the sticker tool i wrote this little tutorial about implementing emoji-fonts.
+  repo: sparkle.js
+  img: https://repository-images.githubusercontent.com/214295436/feb74d80-ed16-11e9-8b0a-86e3e1e77984
+  desc: Some research for shapestacker compiled to a sparkling library
   
 - name: iOS AppStore Development
   i18n: appstore
