@@ -5,24 +5,79 @@ permalink: /blog/
 ---
 
 <div class="wrapper wrapper-content">
-        <div class="ibox blog">
-            <div style="padding: 0 20px">
-    <!-- latest 1 blog -->
-    {% for post in site.posts| sort: "date" | limit: 5 %}
-    <div class="row animated wow zoomInUp" style="border-top: 1px solid #e7eaec;margin-bottom:2px;border-bottom: 1px solid #e7eaec;">
-        {% include plainpost.html %}
+    <div class="ibox blog">
+        <div style="padding: 0 20px">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="text-center article-title">
+                        <div class="navy-line"></div>
+                        <div class="text-center" style="padding-top: 10px">
+                            {% for sitecategory in site.categories %}
+                            {% assign category = sitecategory[0] %}
+                            <a class="btn btn-white btn-xs" style="width: 88px; margin: 0;"
+                                href="{{ category | downcase | prepend: '/' | prepend: site.baseurl }}">{{ category | upcase }}</a>
+                            {% endfor %}
+                        </div>
+                        <h1>
+                            {{ site.title }}
+                        </h1>
+                        <span class="text-muted"><i class="fa fa-star-o"></i></span>
+                        &nbsp;
+                        <span class="text-muted"><i class="fa fa-star-o"></i> </span>
+                        &nbsp;
+                        <span class="text-muted"><i class="fa fa-star-o"></i> </span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-bottom: 100px">
+                <div class="col-lg-8 col-lg-offset-2" style="">
+                    <div class="col-lg-4" style="position: relative;">
+                        <h1><i class="fa fa-star-o" style="padding-right: 10px;"></i>Italien</h1><span>Mein Reisebericht
+                            Italien ist leider zu einer riesengrossen Jammerei verkommen. Job verloren, Freundin weg...
+                            aber schöne Bilder!</span><a class="btn btn-white btn-xs"
+                            style="width: 88px;margin: 10px 10px 20px 0;position: absolute;right: 0;bottom: 0;"
+                            href="/poetry">weiterlesen</a>
+                        <div class="navy-line"></div>
+                    </div>
+                    <div class="col-lg-4" style="position: relative;">
+                        <h1><i class="fa fa-star-o" style="padding-right: 10px;"></i>Planet Explodes</h1><span>Kein
+                            Gedicht über den Klimawandel, nein, hier geht schlicht darum, wie eine Welt
+                            zerbricht.</span><a class="btn btn-white btn-xs pull-right"
+                            style="width: 88px;margin: 10px 10px 20px 0;position: absolute;right: 0;bottom: 0;"
+                            href="/poetry">weiterlesen</a>
+                        <div class="navy-line"></div>
+                    </div>
+                    <div class="col-lg-4" style="position: relative;">
+                        <h1><i class="fa fa-star-o" style="padding-right: 10px;"></i>CSS Animations</h1><span>CSS
+                            Animations und Transitions sind so kinderleicht. Ich erkläre warum, mit viel Animations und
+                            Transitions, versprochen!</span><a class="btn btn-white btn-xs pull-right"
+                            style="width: 88px;margin: 10px 10px 20px 0;position: absolute;right: 0;bottom: 0;"
+                            href="/poetry">weiterlesen</a>
+                        <div class="navy-line"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- latest 1 blog -->
+            {% for post in site.posts| sort: "date" | limit: 1 %}
+            <div class="row animated wow zoomInUp"
+                style="border-top: 1px solid #e7eaec;margin-bottom:2px;border-bottom: 1px solid #e7eaec;">
+                {% include plainpost.html %}
+            </div>
+            {% endfor %}
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="text-center article-title">
+                        <div class="navy-line"></div>
+                        <h1>
+                            END OF SITE
+                        </h1>
+                        <span class="text-muted"><i class="fa fa-archive"></i>
+                            For More, visit the Archives Page</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    {% endfor %}
-    <div class="row">
-        <div class="col-lg-12 text-center">
-            <div class="text-center article-title">
-                <div class="navy-line"></div>
-                <h1>
-                    END OF SITE
-                </h1>
-                <span class="text-muted"><i class="fa fa-archive"></i>
-                    For More, visit the Archives Page</span>
-</div> </div> </div>
-</div>
-</div>
 </div>
