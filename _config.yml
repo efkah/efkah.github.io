@@ -39,7 +39,7 @@ linkedin: vsochat
 dockerhub: vanessa
 
 # Should there be feedback buttons at the bottom of pages?
-feedback: true
+feedback: false
 
 # Link to a privacy policy in footer, uncomment and define if wanted
 # privacy: https://domain.com/privacy
@@ -47,10 +47,11 @@ feedback: true
 # google-analytics: UA-XXXXXXXXXX
 # Image and (square) dimension for logo (don't start with /)
 # If commented, will use material hat theme
-logo: "assets/img/logo/SRCC-square-red.png"
-logo_pixels: 154
+# logo: "assets/img/avatar.png"
+# logo_pixels: 38
 # color: "#30638e"
 color: "seagreen" # primary color for header, buttons
+# headerlogo: "assets/img/avatar.png"
 
 # Build settings
 markdown: kramdown
@@ -83,6 +84,12 @@ defaults:
       layout: page
   -
     scope:
+      path: "lyrics"
+      type: "docs"
+    values:
+      layout: page
+  -
+    scope:
       path: ""
       type: "pages"
     values:
@@ -93,3 +100,6 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+# include:
+#   - _lyrics

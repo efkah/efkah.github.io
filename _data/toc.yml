@@ -1,3 +1,8 @@
+- title: Lyrics
+  url: lyrics
+  links:
+    - title: "Soon to come"
+      url: "lyrics/soon-to-come"
 - title: Documentation
   url: docs
   links:
@@ -16,7 +21,5 @@
           url: "docs/extras/example-quiz"
         - title: Tags Page
           url: "tags"
-    - title: "About"
-      url: "about"
-    - title: "News"
-      url: "news"
+- title: "News"
+  url: "news"
