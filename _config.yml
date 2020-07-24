@@ -1,73 +1,95 @@
 # Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
-# Website settings
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
 title: ...this is Felix Krause
-description: Felix Krause Developer Blog and Knowledge Base.
-keywords: Felix, Krause, Bern, Devolper, Freelancer, Schweiz, Switzerland, SharePoint, O365, Consultant, App, Apps, Swift, C#, Csharp, Html, Javascript, Js, Css
-baseurl: # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
-url: http://efkah.github.io/  # url should be 'http://<github_username>.github.io/homepage' as before
-# url: http://127.0.0.1:4000
-img_path: /static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+email: felix.s.krause@googlemail.com
+author: Felix Krause
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
 
-# author -- index page "about me" section
-author:  # change following line to your infomation.
-  name: efkah  # Be used at blog posts' author.
-  first_name: Felix  # Be used at index page about me section.
-  last_name: Krause  # Be used at index page about me section.
-  avatar: /static/assets/img/avatar.png  # upload your avatar at directory and edit it.
-  github_username: efkah  # Leave blank if you don't have now
-  linkedin_id: felix-krause-858695193 # Leave blank if you don't have now
-  facebook_username: efkah114  # Leave blank if you don't have now
-  twitter_username: efkah4  # Leave blank if you don't have now
-  stackoverflow_id: 990971
-  meetup_id: 265771890
-  xing_id: Felix_Krause19
-  email: felix.s.krause@googlemail.com  # Leave blank if you don't have now
-  cv: /static/assets/vita/felix-krause.pdf # An online CV can be printed as PDF, leave blank if you don't have now
-  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
-  skill_icon1:
-    - name: icon-css3
-    - name: fa-apple
-  skill_icon2:
-    - name: fa-windows
-    - name: icon-html5
-  desc: I am a Mathematician and Full Stack Software Engineer with profound knowledge in MS-SharePoint, Web and App development. Automation Ops and Scripting experience in bash and MS-PowerShell come in handy when adapting bleeding edge framework technologies. When i am not making friends in the local developer scene, i focus on environmental activism, making music and poetry.  # Describe yourself.
+# DO NOT CHANGE THE LINE OF THIS FILE without editing .circleci/circle_urls.sh
+baseurl: "/docsy-jekyll" # the subpath of your site, e.g. /blog
 
-# comment
-disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-  # name: jalpc
+# This is mostly for testing
+url: "https://efkah.github.io" # the base hostname & protocol for your site
 
-# analytics
-## google analytics
-ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
-  id: UA-146586520-1
+# Social (First three Required)
+repo: "https://github.com/efkah/efkah.github.io"
+github_user: "efkah"
+github_repo: "efkah.github.io"
 
-## google optimize
-go:
-  # id:
+# Optional
+twitter: vsoch
+linkedin: vsochat
+dockerhub: vanessa
 
-## growingIO
-gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your configuration; if not, comment following line.
-  # id:
+# Should there be feedback buttons at the bottom of pages?
+feedback: true
 
-## donation
-donation: off  # type 'on'/'off' to choice display donation button at post page or not
+# Link to a privacy policy in footer, uncomment and define if wanted
+# privacy: https://domain.com/privacy
 
-## carousels
-index_carousel: on  # index page carousel switch
-blog_carousel: on  # blog page carousel switch
-
-# scss
-sass:
-  style: compressed
+# google-analytics: UA-XXXXXXXXXX
+# Image and (square) dimension for logo (don't start with /)
+# If commented, will use material hat theme
+logo: "assets/img/logo/SRCC-square-red.png"
+logo_pixels: 154
+# color: "#30638e"
+color: "seagreen" # primary color for header, buttons
 
 # Build settings
-encoding: utf-8
-
-# other settings
-highlighter: rouge
 markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
 
+# If you add tags to pages, define this variable to link them to some external search
+# If you want to link to tags locally on the site, leave this commented out
+# tag_search_endpoint: https://ask.cyberinfrastructure.org/search?q=
+tag_color: primary # danger, success, warning, primary, info, secondary
+
+accentColor: red # purple, green, etc.
+themeColor: red # purple, green, blue, orange, purple, grey
+fixedNav: 'true' # true or false
+
+permalink: /:year/:title/
+markdown: kramdown
+exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:path
+
+# Defaults
+defaults:
+  - scope:
+      path: "_docs"
+      type: "docs"
+    values:
+      layout: page
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "posts"
+      type: "posts"
+    values:
+      layout: "post"
