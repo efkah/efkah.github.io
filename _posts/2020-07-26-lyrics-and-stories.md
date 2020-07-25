@@ -1,6 +1,6 @@
 ---
 title:  "Lyrics and Stories browsable"
-date:   2020-07-24
+date:   2020-07-26
 categories: site
 badges:
  - type: success
