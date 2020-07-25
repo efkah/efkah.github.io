@@ -2,8 +2,8 @@
         <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
         <a class="navbar-brand" href="{{ site.baseurl }}/">
             <span class="navbar-logo"></span>
-            {% if site.headerlogo %}
-              <img src="{{ site.baseurl }}/{{ site.headerlogo }}" width="38" height="38" >
+            {% if site.navbarlogo %}
+              <div style="background-image:url({{ site.baseurl }}/{{ site.navbarlogo }}); width:30px; height:30px;background-size: cover;float: left;margin-right: 10px;"></div>
             {% endif %}
             <span class="font-italic font-weight-bold">{{ site.title }}</span>
 	</a>

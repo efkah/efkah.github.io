@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Docsy Jekyll Theme
+title: ...this is Felix Kah
 permalink: /
 ---
 
-# Welcome to Docsy Jekyll
+# Welcome to "...this is Felix Kah"
 
 This is a starter template for a docsy jekyll theme.
 

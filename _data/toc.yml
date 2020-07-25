@@ -1,9 +1,68 @@
+- title: Stories
+  url: stories
+  links:
+    - title: "Amazon Universal"
+      url: "stories/Amazon Universal"
+    - title: "Transzendenz"
+      url: "stories/Transzendenz"
+
 - title: Lyrics
   url: lyrics
   links:
-    - title: "Soon to come"
-      url: "lyrics/soon-to-come"
-- title: Documentation
+    - title: "22 Craft Songs"
+      url: "lyrics/22 Craft Songs"
+    - title: "21 Im Regen EP"
+      url: "lyrics/21 Im Regen EP"
+    - title: "19 Eins für's Universum"
+      url: "lyrics/19 Eins für's Universum"
+    - title: "18 d'sun"
+      url: "lyrics/18 d'sun"
+    - title: "17 Arise from the Abyss"
+      url: "lyrics/17 Arise from the Abyss"
+    - title: "16 Burn, Kraftfutter EP"
+      url: "lyrics/16 Burn, Kraftfutter EP"
+    - title: "15 ...always love it (Nachtrag)"
+      url: "lyrics/15 ...always love it (Nachtrag)"
+    - title: "14 ... always love it (BEST OF)"
+      url: "lyrics/14 ... always love it (BEST OF)"
+    - title: "13 Seelenfrieden"
+      url: "lyrics/13 Seelenfrieden"
+    - title: "12 punxnodead"
+      url: "lyrics/12 punxnodead"
+    - title: "11 Folkboy EP"
+      url: "lyrics/11 Folkboy EP"
+    - title: "10 Schrei dich frei"
+      url: "lyrics/10 Schrei dich frei"
+    - title: "09 Die Welt um Felix Kah"
+      url: "lyrics/09 Die Welt um Felix Kah"
+    - title: "08 Liedersammlung Nürnberg St. Johannis"
+      url: "lyrics/08 Liedersammlung Nürnberg St. Johannis"
+    - title: "07 Reise zum Mittelpunkt des Universums"
+      url: "lyrics/07 Reise zum Mittelpunkt des Universums"
+    - title: "06 The Ukulele Concert (BEST OF)"
+      url: "lyrics/06 The Ukulele Concert (BEST OF)"
+    - title: "05 Konzeptalbum Austropop (Gescheitert)"
+      url: "lyrics/05 Konzeptalbum Austropop (Gescheitert)"
+    - title: "04 Über luftig leichte Sommerkleider und die Liebe"
+      url: "lyrics/04 Über luftig leichte Sommerkleider und die Liebe"
+    - title: "03 'I woid blo· Sorry song' - Songs"
+      url: "lyrics/03 'I woid blo· Sorry song' - Songs"
+    - title: "02 Heil, Schrecken, ich grüße euch!"
+      url: "lyrics/02 Heil, Schrecken, ich grüße euch!"
+    - title: "01 Liedersammlung Fürth II"
+      url: "lyrics/01 Liedersammlung Fürth II"
+    - title: "00-4 Felix Kah Cover Chords"
+      url: "lyrics/00-4 Felix Kah Cover Chords"
+    - title: "00-3 Lyrische Prosa"
+      url: "lyrics/00-3 Lyrische Prosa"
+    - title: "00-2 Coversongs Bayrisch"
+      url: "lyrics/00-2 Coversongs Bayrisch"
+    - title: "00-1 Die verschollenen Tapes"
+      url: "lyrics/00-1 Die verschollenen Tapes"
+    - title: "00-0 Liederbuch"
+      url: "lyrics/00-0 Liederbuch"
+
+- title: Knowledge Base
   url: docs
   links:
     - title: "Getting Started"
@@ -21,5 +80,6 @@
           url: "docs/extras/example-quiz"
         - title: Tags Page
           url: "tags"
+
 - title: "News"
   url: "news"
