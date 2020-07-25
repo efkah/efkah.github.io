@@ -3,10 +3,22 @@ title: 01 Liedersammlung Fürth II
 tags: 
  - lyrics
  - overview
+ - txt-only
 description: Collection of Lyrics and Guitar Songs
 ---
 
 # Liedersammlung Fürth II
+
+## Songs / Poems
+
+* [01 Das mit der Gitarre hätte ich mal lieber lassen sollen.txt](01 Das mit der Gitarre hätte ich mal lieber lassen sollen.txt)
+* [02 Die Frisur.txt](02 Die Frisur.txt)
+* [03 Die Speedo.txt](03 Die Speedo.txt)
+* [04 Echte Frauen.txt](04 Echte Frauen.txt)
+* [05 Partysong.txt](05 Partysong.txt)
+* [06 Palais de l'amour.txt](06 Palais de l'amour.txt)
+* [07 A Poem.txt](07 A Poem.txt)
+* [08 Fürth.txt](08 Fürth.txt)
 
 ## Cover Art
 

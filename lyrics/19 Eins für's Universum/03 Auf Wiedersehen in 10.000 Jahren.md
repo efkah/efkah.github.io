@@ -21,15 +21,15 @@ Der wald muss sterben, für den armen Bergmann
 Und für den neuen Düsenjet von dem Herrn RWE Vorstand
 
               e                         a
-  Und auch du musst doch verstehen, die Welt hat sich verändert
-  Auch du lebst doch nicht mehr nur in der Vergangenheit
-  Die Zerstörung, sie muss endlich aufhörn
-               d                       G
-  Sonst dauert es 10.000 Jahre bis die Erde nicht mehr weint
-  C   C                 F       G
-  ... Auf Wiedersehen,
-  ... Auf Wiedersehen
-  
+  Und auch du musst doch verstehen, die Welt hat sich verändert
+  Auch du lebst doch nicht mehr nur in der Vergangenheit
+  Die Zerstörung, sie muss endlich aufhörn
+               d                       G
+  Sonst dauert es 10.000 Jahre bis die Erde nicht mehr weint
+  C   C                 F       G
+  ... Auf Wiedersehen,
+  ... Auf Wiedersehen
+  
 e / a
 F / D
 e / a7
@@ -50,15 +50,15 @@ Was soll ich kämpfen, es scheint es ist des Schicksals Lauf
 Doch Wenn ihr so tot seit, wie die Welt, bauen wir sie wieder auf
     
                e                         a
-  Aber auch du musst doch verstehen, die Welt hat sich verändert
-  Auch du lebst doch nicht mehr nur in der Vergangenheit
-  Die Zerstörung, sie muss endlich aufhörn
-               d                       G
-  Sonst dauert es 10.000 Jahre bis die Erde nicht mehr weint
-  C   C                 F       G
-  ... Ich sag Auf Wiedersehen
-  ... Diese Träne ist für dich
-  ... Auf Wiedersehen
+  Aber auch du musst doch verstehen, die Welt hat sich verändert
+  Auch du lebst doch nicht mehr nur in der Vergangenheit
+  Die Zerstörung, sie muss endlich aufhörn
+               d                       G
+  Sonst dauert es 10.000 Jahre bis die Erde nicht mehr weint
+  C   C                 F       G
+  ... Ich sag Auf Wiedersehen
+  ... Diese Träne ist für dich
+  ... Auf Wiedersehen
 
 ```
 
