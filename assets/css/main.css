@@ -18043,7 +18043,8 @@ html body .md-typeset .headerlink {
 .td-sidebar-nav {
     padding-right: .5rem;
     margin-right: -15px;
-    margin-left: -15px
+    margin-left: -15px;
+    border-bottom: 4px double #dee2e6;
 }
 
 @media(min-width:768px) {
@@ -18051,14 +18052,16 @@ html body .md-typeset .headerlink {
         .td-sidebar-nav {
             max-height: -webkit-calc(100vh - 10rem);
             max-height: calc(100vh - 10rem);
-            overflow-y: auto
+            overflow-y: auto;
+            border-bottom: none;
         }
     }
 }
 
 @media(min-width:768px) {
     .td-sidebar-nav {
-        display: block!important
+        display: block !important;
+        border-bottom: none;
     }
 }
 
