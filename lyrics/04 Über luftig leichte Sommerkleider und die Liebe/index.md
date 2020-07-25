@@ -8,4 +8,6 @@ description: Collection of Lyrics and Guitar Songs
 
 # Über luftig leichte Sommerkleider und die Liebe
 
+## Cover Art
+
 ![Cover](cover.png)

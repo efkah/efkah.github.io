@@ -7,4 +7,3 @@ description: Collection of Lyrics and Guitar Songs
 ---
 
 # Lyrische Prosa
-

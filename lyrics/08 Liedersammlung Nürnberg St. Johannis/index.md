@@ -8,4 +8,6 @@ description: Collection of Lyrics and Guitar Songs
 
 # Liedersammlung Nürnberg St. Johannis
 
+## Cover Art
+
 ![Cover](cover.png)

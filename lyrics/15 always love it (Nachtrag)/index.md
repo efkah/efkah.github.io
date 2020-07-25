@@ -8,4 +8,6 @@ description: Collection of Lyrics and Guitar Songs
 
 # ...always love it (Nachtrag)
 
+## Cover Art
+
 ![Cover](cover.png)

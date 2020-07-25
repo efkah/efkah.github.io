@@ -8,5 +8,6 @@ description: Collection of Lyrics and Guitar Songs
 
 # Schrei dich frei
 
-![Cover](Schrei dich frei.png)
+## Cover Art
 
+![Cover](Schrei dich frei.png)

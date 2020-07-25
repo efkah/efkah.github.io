@@ -8,5 +8,6 @@ description: Collection of Lyrics and Guitar Songs
 
 # Coversongs Bayrisch
 
-![Cover](Coversongs Bayrisch.png)
+## Cover Art
 
+![Cover](Coversongs Bayrisch.png)

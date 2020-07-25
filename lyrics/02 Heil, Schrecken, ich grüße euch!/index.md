@@ -8,4 +8,6 @@ description: Collection of Lyrics and Guitar Songs
 
 # Heil, Schrecken, ich grüße euch!
 
+## Cover Art
+
 ![Cover](00 cover.png)

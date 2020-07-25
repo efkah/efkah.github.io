@@ -8,4 +8,6 @@ description: Collection of Lyrics and Guitar Songs
 
 # d'sun
 
+## Cover Art
+
 ![Cover Version 1](cover.png)

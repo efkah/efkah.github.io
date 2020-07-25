@@ -8,4 +8,6 @@ description: Collection of Lyrics and Guitar Songs
 
 # Konzeptalbum Austropop (Gescheitert)
 
+## Cover Art
+
 ![Cover](cover.png)

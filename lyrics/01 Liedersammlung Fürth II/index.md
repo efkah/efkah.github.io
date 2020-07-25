@@ -8,7 +8,11 @@ description: Collection of Lyrics and Guitar Songs
 
 # Liedersammlung Fürth II
 
+## Cover Art
+
 ![Cover](00 cover.png)
+
+## Other Artwork
 
 ![Artwork](artworks-000070108739-hvnpbv-t500x500.jpg)
 

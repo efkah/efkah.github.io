@@ -8,4 +8,6 @@ description: Collection of Lyrics and Guitar Songs
 
 # 'I woid bloß Sorry song' - Songs
 
+## Cover Art
+
 ![Cover](cover.png)
