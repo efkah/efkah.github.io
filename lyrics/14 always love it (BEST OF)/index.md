@@ -3,6 +3,7 @@ title: 14 ...always love it (BEST OF)
 tags: 
  - lyrics
  - overview
+ - txt-only
 description: Collection of Lyrics and Guitar Songs
 ---
 
