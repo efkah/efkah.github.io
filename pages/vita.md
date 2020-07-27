@@ -1,18 +1,12 @@
 ---
 title: Vita
 permalink: /vita/
-tags:
- - english
 ---
 
-# Vita / Lebenslauf
+# Vita
 
-*Yet to come*
+*Please contact me via my email adress: felix.s.krause@googlemail.com*
 
-## Career
+## Experience
 
 ## Skills
-
-## Projects
-
-## and so on... 

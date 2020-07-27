@@ -6,6 +6,10 @@ tags:
 description: Collection of Lyrics and Guitar Songs
 ---
 
-# Welcome
+# Lyrics
 
-Lorem ipsum dolor sit amet...
+> Was ist Glück? Glück ist Zufriedenheit.
+>
+> ​	*Vietnamesisches Sprichwort*
+
+Bitte benutzen sie die Seitennavigation, um Unterseiten anzuwählen.
