@@ -1,9 +1,8 @@
 ---
 title: 21 Im Regen EP
-tags: 
- - lyrics
- - overview
- - contains-unfinished-work
+tags:
+  - lyrics
+  - overview
 description: Collection of Lyrics and Guitar Songs
 ---
 
@@ -11,11 +10,10 @@ description: Collection of Lyrics and Guitar Songs
 
 ## Songs / Poems
 
-* [01 Die kleinen Kinder](01 Die kleinen Kinder)
-* [02 Mein Dein Schatten](02 Mein Dein Schatten)
-* [03 Ein Lied über einen gealterten Junggesellen](03 Ein Lied über einen gealterten Junggesellen)
-* [04 Ich lass mich fallen](04 Ich lass mich fallen)
-* [05 Sie mag mich](05 Sie mag mich)
+- [01 Die kleinen Kinder](01 Die kleinen Kinder)
+- [02 Mein Dein Schatten](02 Mein Dein Schatten)
+- [03 Ein Lied über einen gealterten Junggesellen](03 Ein Lied über einen gealterten Junggesellen)
+- [04 Ich lass mich fallen](04 Ich lass mich fallen)
 
 ## Cover Art
 

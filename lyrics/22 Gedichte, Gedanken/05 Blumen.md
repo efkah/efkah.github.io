@@ -1,5 +1,6 @@
 # Blumen
 
+```
 Gestern sah ich am Wegesrand,
 die allerschönste aller Blüten,
 Schon war mein Blick von ihr gebannt,
@@ -24,3 +25,4 @@ Ich war voll Glück, ich war von Sinnen,
 Trug sie freudestrahlend heim,
 Und kaum warn wir im Hause drinnen,
 Ging sie ein.
+```

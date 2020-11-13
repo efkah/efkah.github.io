@@ -15,7 +15,7 @@ _(You Are) The System_ is a fictional electro band, writing songs for an upcomin
 - Rootolf -1
 - Johnny M. Chanyk
 
-As for an electro band, their lyrics usually are short and pointed, but since the voice is a closet-poet, too, the list also contains some lyrics that did not fit the band.
+As for an electro band, their lyrics usually are short and pointed, but since the voice is a closet-poet, too, the list might also contain some lyrics that did not fit the band.
 
 ## Songs / Poems
 

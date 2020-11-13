@@ -1,5 +1,6 @@
 # Deutschland schafft sich ab
 
+```
 Lieber Tequila als Doppelkorn
 Lieber Becks als Schlenkerla
 
@@ -14,3 +15,4 @@ Lieber Kaffee als Muckefuck
 
 Lieber Ricola als Malzbonbons
 Lieber Jeans als Flachsfaser
+```
